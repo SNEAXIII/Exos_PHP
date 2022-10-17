@@ -20,7 +20,7 @@ function calculMention($moyenne) {
 $liste = [];
 $longueurListe = count($liste);
 
-if ($liste != []) {
+if ($longueurListe > 0) {
 
     $phrase = null;
     $total = 0;
@@ -35,4 +35,3 @@ if ($liste != []) {
 } else {
     echo "Veuillez saisir des notes";
 }
-
