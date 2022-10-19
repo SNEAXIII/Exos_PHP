@@ -15,3 +15,4 @@ if ($longueurListe > 0) {
     }
     echo $max;
 }
+
