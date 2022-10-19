@@ -3,4 +3,4 @@
 $prixHT = readline("Saisir un prix HT : ");
 $tauxTva = readline("Saisir un taux de TVA : ")/100+1;
 
-echo "Le prix TTC est : ".round($prix*$taux,2);
+echo "Le prix TTC est : ".round($prixHT*$tauxTva,2);

@@ -1,6 +1,5 @@
 <?php
 
-
 $nb_min = readline("selectionnez un chiffre : ");
 
 for ($nb = $nb_min;$nb <= 100;$nb++) {

@@ -10,7 +10,7 @@ $delta = $b**2 - (4 * $a* $c);
 if ($delta<0) {
     echo "Il n'exite pas de solution réelle";
 } elseif ($delta == 0) {
-    $resultat = -$b / (2*a);
+    $resultat = -$b / (2*$a);
     echo "Le résultat est $resultat"."\n";
 } else {
     $resultat1 = round((-$b -sqrt($delta))/ (2*$a),3);

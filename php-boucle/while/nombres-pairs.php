@@ -1,6 +1,5 @@
 <?php
 
-
 $nb = readline("selectionnez un chiffre : ");
 
 while ($nb <= 100) {
