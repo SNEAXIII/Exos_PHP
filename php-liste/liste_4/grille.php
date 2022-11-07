@@ -28,24 +28,26 @@ function afficheTableau2D($tab) {
         return null;
     }
     global $couleurs;
-    $i1=0;
-    foreach ($tab as $y) {
-        echo $couleurs["texteBleu"].sprintf("%02d", $i1).$couleurs["texteFondBlanc"];echo " ";
-        $i2=0;
-        foreach ($y as $x) {
+    $indicePremiereLigne = "    ";
+    echo $indicePremiereLigne;
+    foreach ($tab[0] as $i1=>$x) {
+        echo $couleurs["texteBleu"].sprintf("%02d", $i1).$couleurs["texteFondBlanc"]."  ";
+    }
+    echo "\n";
+    foreach ($tab as $i1=>$y) {
+        echo $couleurs["texteBleu"].sprintf("%02d", $i1).$couleurs["texteFondBlanc"]." ";
+        foreach ($y as $i2=>$x) {
             echo "| ".$couleurs["texteJaune"]."$x".$couleurs["texteFondBlanc"]." ";
-            $i2++;
+
         }
         echo "|\n";
-        $i1++;
+
     }
 }
-
-
 //$hauteur = readline("Saisissez une hauteur");
 //$largeur = readline("Saisissez une largeur");
 
-$hauteur = 5;$largeur = 5;
+$hauteur = 15;$largeur = 15;
 
 $tableau2D = construitTableau2D($hauteur,$largeur);
 
