@@ -18,10 +18,11 @@ foreach ($listeNombre as $item) {
 
     $pourcentage = floor($i*100/$nombreAIterer);
 
-//    Cette boucle permet de ralentir la vitesse d'éxecution du script
-    for ($a=0;$a<1000;$a++) {
+//  Cette boucle permet de ralentir la vitesse d'éxecution du script
+    for ($a=0;$a<400;$a++) {
         $val = null;
     }
+//  La boucle prends fin ici
     if ($pourcentage != $ancienPourcentage) {
 
         $ancienPourcentage = $pourcentage;
