@@ -10,14 +10,13 @@ $couleurs = [
 
 
 function construitTableau2D($hauteur,$largeur): ?array {
-    if ($hauteur < 0){
-        return null;
-    }
+    if ($hauteur < 0) return null;
     $tab = [];
+    $positionVide = "-";
     for ($i1=0;$i1<=$hauteur;$i1++) {
         $tab[] = [];
         for ($i2=0;$i2<=$largeur;$i2++) {
-            $tab[$i1][] = "_";
+            $tab[$i1][] = $positionVide;
         }
     }
     return $tab;
@@ -47,7 +46,7 @@ function afficheTableau2D($tab) {
 //$hauteur = readline("Saisissez une hauteur");
 //$largeur = readline("Saisissez une largeur");
 
-$hauteur = 15;$largeur = 15;
+$hauteur = 10;$largeur = 45;
 
 $tableau2D = construitTableau2D($hauteur,$largeur);
 

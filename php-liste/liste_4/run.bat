@@ -1,2 +1,0 @@
-PHP grille.php
-pause

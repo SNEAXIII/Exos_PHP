@@ -5,7 +5,6 @@ function recupereReponse(): string
     $reponse = readline("Saisir une note (q pour arrêter) : "."\n");
     return $reponse;
 }
-
 function siNoteEstCorrecte($note): bool
 {
     if ($note >= 0 && $note <= 20) {
@@ -14,7 +13,6 @@ function siNoteEstCorrecte($note): bool
     return false;
 
 }
-
 function afficheListe($liste) {
     if (count($liste) > 0) {
         foreach ($liste as $elem) {
@@ -22,15 +20,12 @@ function afficheListe($liste) {
         }
     }
 }
-
 function moyenneNoteDe10A20($liste) {
     if (count($liste) == 0) {
         return null;
     }
-
     $nombreNotesValide = 0;
     $totalNote = 0;
-
     foreach ($liste as $note) {
         $siNoteEstSuperieureA10 = $note >= 10;
         if ($siNoteEstSuperieureA10) {
@@ -43,17 +38,14 @@ function moyenneNoteDe10A20($liste) {
         return $moyenne;
     }
     return null;
-
 }
+
 $listeNotes = [];
 $reponseUtilisateur = null;
 
-
 while (true) {
-
     $reponseUtilisateur = recupereReponse();
     $siNoteEstValide = siNoteEstCorrecte($reponseUtilisateur);
-
     if ($siNoteEstValide) {
         $listeNotes[] = $reponseUtilisateur;
     } elseif ($reponseUtilisateur == "q") {
@@ -79,7 +71,3 @@ if ($siNoteDansNombreNote) {
 } else {
     echo "Vous n'avez pas saisi de notes";
 }
-
-
-
-
