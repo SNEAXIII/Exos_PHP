@@ -51,7 +51,7 @@ function afficheListe($liste): void
         }
     }
 }
-function saisirAReaprovisionner($tableauProduit)
+function saisirAReaprovisionner(&$tableauProduit)
 {
     if (count($tableauProduit) > 0) {
         $saisieReference = strval(readline("Saisir une référence : "));
@@ -63,7 +63,6 @@ function saisirAReaprovisionner($tableauProduit)
             echo "La référence n'existe pas"."\n";
         }
     }
-    return $tableauProduit;
 }
 
 $tableauProduit = [
@@ -83,7 +82,7 @@ echo "afficheAReaprovisionner___________________________________________________
 afficheListeAReaprovisionner($tableauProduit);
 
 echo "saisirAReaprovisionner_____________________________________________________________________________________"."\n";
-$tableauProduit = saisirAReaprovisionner($tableauProduit);
+saisirAReaprovisionner($tableauProduit);
 
 echo "afficheRefDes______________________________________________________________________________________________"."\n";
 afficheReferenceDesignationPrix($tableauProduit);
