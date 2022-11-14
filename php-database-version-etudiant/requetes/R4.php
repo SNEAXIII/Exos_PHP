@@ -12,5 +12,6 @@ $dateCreation = readline("Saisir une date (dd/mm/yyyy) : ");
 
 $resultats = [];
 
+
 // test
 print_r($resultats);
