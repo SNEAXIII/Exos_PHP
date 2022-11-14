@@ -51,7 +51,7 @@ function afficheListe($liste): void
         }
     }
 }
-function saisirAReaprovisionner(&$tableauProduit)
+function saisirAReaprovisionner(&$tableauProduit): void
 {
     if (count($tableauProduit) > 0) {
         $saisieReference = strval(readline("Saisir une référence : "));
