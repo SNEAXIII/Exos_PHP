@@ -2,7 +2,7 @@
 
 //echo sprintf("%02d", 3);
 
-$couleurs = [
+const COULEUR = [
     "texteFondBlanc" => "\033[0m",
     "texteJaune" => "\033[33m",
     "texteBleu"  => "\033[34m",
@@ -26,17 +26,16 @@ function afficheTableau2D($tab) {
     if (count($tab) < 0){
         return null;
     }
-    global $couleurs;
-    $indicePremiereLigne = "    ";
+    $indicePremiereLigne = str_repeat(" ",4);
     echo $indicePremiereLigne;
     foreach ($tab[0] as $i1=>$x) {
-        echo $couleurs["texteBleu"].sprintf("%02d", $i1).$couleurs["texteFondBlanc"]."  ";
+        echo COULEUR["texteBleu"].sprintf("%02d", $i1).COULEUR["texteFondBlanc"]."  ";
     }
     echo "\n";
     foreach ($tab as $i1=>$y) {
-        echo $couleurs["texteBleu"].sprintf("%02d", $i1).$couleurs["texteFondBlanc"]." ";
+        echo COULEUR["texteBleu"].sprintf("%02d", $i1).COULEUR["texteFondBlanc"]." ";
         foreach ($y as $i2=>$x) {
-            echo "| ".$couleurs["texteJaune"]."$x".$couleurs["texteFondBlanc"]." ";
+            echo "| ".COULEUR["texteJaune"]."$x".COULEUR["texteFondBlanc"]." ";
 
         }
         echo "|\n";
@@ -52,4 +51,4 @@ $tableau2D = construitTableau2D($hauteur,$largeur);
 
 afficheTableau2D($tableau2D);
 
-//print_r($tableau2D);
+//print_r($
