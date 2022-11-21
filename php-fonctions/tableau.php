@@ -9,5 +9,33 @@ function afficherTableau(array $tab) {
     echo "\n";
 }
 
+function rechercherNombrePair(array $tab) : array
+{
+    $resultats = [];
+    $siTabNonVide = count($tab) != 0;
+    if ($siTabNonVide) {
+        foreach ($tab as $element) {
+            $siNombrePair = $element % 2 == 0;
+            if ($siNombrePair) {
+                $resultats[] = $element;
+            }
+        }
+    }
+    return $resultats;
+}
+
+function doubleLesElements(array &$tab) : void
+{
+    foreach ($tab as &$elem) {
+        $elem *= 2;
+    }
+//    print_r($tab);
+}
+
+//afficherTableau(rechercherNombrePair($tab));
+
 afficherTableau($tab);
-afficherTableau($tab2);
+doubleLesElements($tab);
+afficherTableau($tab);
+
+//afficherTableau($tab2);

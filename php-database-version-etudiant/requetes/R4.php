@@ -8,30 +8,34 @@ require "../base-de-donnees/tableCategorie.php";
  * Récupérer les articles dont la date de création est supérieure à une date donnée
  * On souhaite récupérer l'id, le titre, le contenu, la date de création, le prénom et le nom de l'auteur
 */
-
+$resultats = [];
 //$dateCreation = strval(readline("Saisir une date (dd/mm/yyyy) : "));
-$dateCreation = "10/10/2000";
-$dateCreation = str_replace("/","-",$dateCreation);
+$dateUtilisateur = "10/10/2030";
+$dateUtilisateur = str_replace("/","-",$dateUtilisateur);
 
-echo substr_count($dateCreation,"");
 
 foreach ($tableArticles as $idArticle => $article) {
-    foreach ($tableCategories as $idCategorie => $categorie) {
-        if ($article["id_categorie"] == $idCategorie) {
+    foreach ($tableAuteurs as $idAuteur => $auteur) {
+        $if = $article["date_creation"] > $dateUtilisateur;
+        echo "a --> $article[date_creation], s --> $dateUtilisateur, $if\n";
+//        echo "$idAuteur \ $article[id_auteur]\n";
+        $siIdAuteurEgalArticleTiAuteur = $idAuteur == $article["id_auteur"];
+        $article["date_creation"] > $dateUtilisateur
+        if ($siIdAuteurEgalArticleTiAuteur && $siDate) {
+
             $resultats[] =
                 [
                     "id" => $idArticle,
                     "titre" => $article["titre"],
                     "contenu" => $article["contenu"],
                     "date_creation" => $article["date_creation"],
-                    "nom_categorie" => $categorie["libelle"],
+                    "prenom" => $auteur["prenom"],
+                    "nom" => $auteur["nom"]
                 ];
         }
     }
 }
 
-
-$resultats = [];
 
 
 // test
