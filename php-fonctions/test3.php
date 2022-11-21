@@ -1,2 +1,2 @@
 <?php
-include
+require_once "FX.php";

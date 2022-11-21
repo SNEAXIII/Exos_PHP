@@ -1,13 +1,9 @@
 <?php
+
+require_once "FX.php";
+
 $tab = [12,15,16,17,55,44];
 $tab2 = [12,15,"s",17,"ssss",44];
-
-function afficherTableau(array $tab) {
-    foreach ($tab as $elem) {
-        echo "$elem ";
-    }
-    echo "\n";
-}
 
 function rechercherNombrePair(array $tab) : array
 {
@@ -22,14 +18,6 @@ function rechercherNombrePair(array $tab) : array
         }
     }
     return $resultats;
-}
-
-function doubleLesElements(array &$tab) : void
-{
-    foreach ($tab as &$elem) {
-        $elem *= 2;
-    }
-//    print_r($tab);
 }
 
 //afficherTableau(rechercherNombrePair($tab));
