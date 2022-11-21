@@ -17,7 +17,7 @@ $dateUtilisateur = str_replace("/","-",$dateUtilisateur);
 foreach ($tableArticles as $idArticle => $article) {
     foreach ($tableAuteurs as $idAuteur => $auteur) {
         $if = $article["date_creation"] > $dateUtilisateur;
-        echo "a --> $article[date_creation], s --> $dateUtilisateur, $if\n";
+//        echo "a --> $article[date_creation], s --> $dateUtilisateur, $if\n";
 //        echo "$idAuteur \ $article[id_auteur]\n";
         $siIdAuteurEgalArticleTiAuteur = $idAuteur == $article["id_auteur"];
         $siDateCreationSupDateSaisie = $article["date_creation"] > $dateUtilisateur;
@@ -36,8 +36,6 @@ foreach ($tableArticles as $idArticle => $article) {
         }
     }
 }
-
-
 
 // test
 print_r($resultats);
