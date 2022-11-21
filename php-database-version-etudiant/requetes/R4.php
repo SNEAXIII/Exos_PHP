@@ -20,8 +20,9 @@ foreach ($tableArticles as $idArticle => $article) {
         echo "a --> $article[date_creation], s --> $dateUtilisateur, $if\n";
 //        echo "$idAuteur \ $article[id_auteur]\n";
         $siIdAuteurEgalArticleTiAuteur = $idAuteur == $article["id_auteur"];
-        $article["date_creation"] > $dateUtilisateur
-        if ($siIdAuteurEgalArticleTiAuteur && $siDate) {
+        $siDateCreationSupDateSaisie = $article["date_creation"] > $dateUtilisateur;
+        echo "$siIdAuteurEgalArticleTiAuteur $siDateCreationSupDateSaisie\n";
+        if ($siIdAuteurEgalArticleTiAuteur && $siDateCreationSupDateSaisie) {
 
             $resultats[] =
                 [
