@@ -8,22 +8,34 @@ require "../base-de-donnees/tableCategorie.php";
  * Récupérer les articles dont la date de création est supérieure à une date donnée
  * On souhaite récupérer l'id, le titre, le contenu, la date de création, le prénom et le nom de l'auteur
 */
+
+function siDateCreationSuperieureADateUtilisateur(string $dateCreation, string $dateUtilisateur) : bool
+{
+//    conversion des dates en secondes pour faciliter la comparaison
+    $dateEnSecondeCreation = strtotime($dateCreation);
+    $dateEnSecondeUtilisateur = strtotime($dateUtilisateur);
+//    vérifie si les 2 dates sont valides
+    if (!($dateEnSecondeCreation && $dateEnSecondeUtilisateur)) {
+        return false;
+    }
+//    compare les 2 dates
+    if ($dateEnSecondeCreation > $dateEnSecondeUtilisateur) {
+        return true;
+    }
+    return false;
+}
+
 $resultats = [];
 //$dateCreation = strval(readline("Saisir une date (dd/mm/yyyy) : "));
 $dateUtilisateur = "10/10/2030";
-$dateUtilisateur = str_replace("/","-",$dateUtilisateur);
 
 
 foreach ($tableArticles as $idArticle => $article) {
     foreach ($tableAuteurs as $idAuteur => $auteur) {
-        $if = $article["date_creation"] > $dateUtilisateur;
-//        echo "a --> $article[date_creation], s --> $dateUtilisateur, $if\n";
-//        echo "$idAuteur \ $article[id_auteur]\n";
+        $siDateCreationSuperieureADateUtilisateur = siDateCreationSuperieureADateUtilisateur($article["date_creation"], $dateUtilisateur);
         $siIdAuteurEgalArticleTiAuteur = $idAuteur == $article["id_auteur"];
-        $siDateCreationSupDateSaisie = $article["date_creation"] > $dateUtilisateur;
-        echo "$siIdAuteurEgalArticleTiAuteur $siDateCreationSupDateSaisie\n";
-        if ($siIdAuteurEgalArticleTiAuteur && $siDateCreationSupDateSaisie) {
-
+        if ($siIdAuteurEgalArticleTiAuteur && $siDateCreationSuperieureADateUtilisateur) {
+            echo "cest good\n";
             $resultats[] =
                 [
                     "id" => $idArticle,
