@@ -25,29 +25,34 @@ function siDateCreationSuperieureADateUtilisateur(string $dateCreation, string $
     return false;
 }
 
-$resultats = [];
+
+function r4(array $tableArticles, array $tableAuteurs) {
+    $resultats = [];
 //$dateCreation = strval(readline("Saisir une date (dd/mm/yyyy) : "));
-$dateUtilisateur = "10/10/2030";
-
-
-foreach ($tableArticles as $idArticle => $article) {
-    foreach ($tableAuteurs as $idAuteur => $auteur) {
-        $siDateCreationSuperieureADateUtilisateur = siDateCreationSuperieureADateUtilisateur($article["date_creation"], $dateUtilisateur);
-        $siIdAuteurEgalArticleTiAuteur = $idAuteur == $article["id_auteur"];
-        if ($siIdAuteurEgalArticleTiAuteur && $siDateCreationSuperieureADateUtilisateur) {
-            echo "cest good\n";
-            $resultats[] =
-                [
-                    "id" => $idArticle,
-                    "titre" => $article["titre"],
-                    "contenu" => $article["contenu"],
-                    "date_creation" => $article["date_creation"],
-                    "prenom" => $auteur["prenom"],
-                    "nom" => $auteur["nom"]
-                ];
+    $dateUtilisateur = str_replace("/","-","15-09-2022");
+    foreach ($tableArticles as $idArticle => $article) {
+        foreach ($tableAuteurs as $idAuteur => $auteur) {
+            $siDateCreationSuperieureADateUtilisateur = siDateCreationSuperieureADateUtilisateur($article["date_creation"], $dateUtilisateur);
+            $siIdAuteurEgalArticleTiAuteur = $idAuteur == $article["id_auteur"];
+            if ($siIdAuteurEgalArticleTiAuteur && $siDateCreationSuperieureADateUtilisateur) {
+                $resultats[] =
+                    [
+                        "id" => $idArticle,
+                        "titre" => $article["titre"],
+                        "contenu" => $article["contenu"],
+                        "date_creation" => $article["date_creation"],
+                        "prenom" => $auteur["prenom"],
+                        "nom" => $auteur["nom"]
+                    ];
+            }
         }
     }
+    return $resultats;
 }
 
+
 // test
-print_r($resultats);
+$resultats = r4($tableArticles, $tableAuteurs);
+foreach ($resultats as $item) {
+    echo $item["id"]." ";
+}

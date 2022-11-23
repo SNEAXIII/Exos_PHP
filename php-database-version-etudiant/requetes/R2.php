@@ -9,12 +9,13 @@ require "../base-de-donnees/tableCategorie.php";
  * On souhaite récupérer l'id, le titre, le contenu et la date de création
 */
 
-$categorieId = readline("Saisir l'id d'une catégorie : ");
+function r2(array $tableArticles) : array
+{
+    //$categorieId = readline("Saisir l'id d'une catégorie : ");
+    $categorieId = 2;
+    $resultats = [];
 
-$resultats = [];
-
-foreach ($tableArticles as $id => $item) {
-    if ($categorieId == $item["id_categorie"]) {
+    foreach ($tableArticles as $id => $item) if ($categorieId == $item["id_categorie"]){
         $resultats[] =
             [
                 "id" => $id,
@@ -22,8 +23,14 @@ foreach ($tableArticles as $id => $item) {
                 "contenu" => $item["contenu"],
                 "date_creation" => $item["date_creation"],
             ];
+
     }
+    return $resultats;
 }
 
+
 // test
-print_r($resultats);
+$resultats = r2($tableArticles);
+foreach ($resultats as $item) {
+    echo $item["id"]." ";
+}

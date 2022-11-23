@@ -9,18 +9,24 @@ require "../base-de-donnees/tableCategorie.php";
  * On souhaite récupérer l'id, le titre, le contenu et la date de création
 */
 
-$resultats = [];
-
-foreach ($tableArticles as $id => $item) {
-    $resultats[] =
-        [
-            "id" => $id,
-            "titre" => $item["titre"],
-            "contenu" => $item["contenu"],
-            "date_creation" => $item["date_creation"],
-        ];
+function r1(array $tableArticles) : array
+{
+    $resultats = [];
+    foreach ($tableArticles as $id => $item) if ($item["actif"]) {
+        $resultats[] =
+            [
+                "id" => $id,
+                "titre" => $item["titre"],
+                "contenu" => $item["contenu"],
+                "date_creation" => $item["date_creation"],
+            ];
+    }
+    return $resultats;
 }
 
 // test
-print_r($resultats);
+$resultats = r1($tableArticles);
+foreach ($resultats as $item) {
+    echo $item["id"]." ";
+}
 
