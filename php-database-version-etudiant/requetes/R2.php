@@ -14,7 +14,6 @@ function r2(array $tableArticles) : array
     //$categorieId = readline("Saisir l'id d'une catégorie : ");
     $categorieId = 2;
     $resultats = [];
-
     foreach ($tableArticles as $id => $item) if ($categorieId == $item["id_categorie"]){
         $resultats[] =
             [
@@ -23,7 +22,6 @@ function r2(array $tableArticles) : array
                 "contenu" => $item["contenu"],
                 "date_creation" => $item["date_creation"],
             ];
-
     }
     return $resultats;
 }
