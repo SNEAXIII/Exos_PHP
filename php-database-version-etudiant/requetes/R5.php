@@ -8,8 +8,10 @@ require "../base-de-donnees/tableCategorie.php";
  * Récupérer les articles à afficher ordonnés sur le titre (ordre alphabétique)
  * On souhaite récupérer l'id, le titre, la date de création et le libellé de la catégorie
 */
-function r5() : array
+function r5($tableArticles) : array
 {
+    $collone = array_column($tableArticles, "titre");
+    array_multisort($collone,SORT_ASC, SORT_STRING, $tableArticles);
     $temporaire = [];
     $resultats = [];
 
@@ -17,6 +19,6 @@ function r5() : array
 }
 
 // test
-$resultats = r5();
+$resultats = r5($tableArticles);
 
 print_r($resultats);
