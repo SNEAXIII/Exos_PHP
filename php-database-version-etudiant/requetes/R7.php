@@ -11,6 +11,7 @@ require "../base-de-donnees/tableCategorie.php";
 
 function r7() {
     $resultats = [];
+    $nombreArticleParAuteur = array_count_values()
     foreach ($tableArticle as $id=>$article) {
 
     }
@@ -18,4 +19,5 @@ function r7() {
 
 
 // test
+
 print_r($resultats);
