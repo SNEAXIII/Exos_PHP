@@ -37,5 +37,11 @@ function afficheTableau2D($tab) {
 
     }
 }
+
 $grid = creerGrille(5,7);
-afficheTableau2D($grid);
+
+//afficheTableau2D($grid);
+
+function getGrille(array grille, int largeur) : string {
+
+}
