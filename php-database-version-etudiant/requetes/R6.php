@@ -7,7 +7,7 @@ require "../base-de-donnees/tableCategorie.php";
 /* Requête 6
  * Récupérer le nombre d'articles postés par un auteur donné (id_auteur)
 */
-function r6(array $tableArticles) //: int
+function r6(array $tableArticles) : int
 {
     $auteurId = 3;
     $nb = 0;
