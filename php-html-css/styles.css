@@ -1,0 +1,42 @@
+h1
+{
+    color: crimson;
+    border-top: 2px solid  black;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+h2
+{
+    display: inline-block;
+    color: brown;
+    border-bottom: solid 1px orange;
+}
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+#bienvenue
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+#menu
+{
+    list-style: none;
+    font-size: 18px;
+}
+#menu a
+{
+    color: coral;
+    text-decoration: none;
+}
+i
+{
+    padding: 0 7px;
+}
+.texte-gras
+{
+    font-weight: bold;
+    color: blue;
+    font-size: 20px;
+}
