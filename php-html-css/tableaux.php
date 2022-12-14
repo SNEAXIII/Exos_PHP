@@ -25,11 +25,10 @@ function afficheTableauTable() {
     echo "</tr>";
     foreach (tableauNo2 as $item) {
         $prenom = $item["Prenom"];
-        $nom = $item["Prenom"];
-        $email = $item["Prenom"];
-        $prenom = $item["Prenom"];
-
-        echo "<tr><td></td></tr>";
+        $nom = $item["Nom"];
+        $email = $item["Email"];
+        $premium = $item["Premium"];
+        echo "<tr><td>$prenom</td><td>$nom</td><td>$email</td><td>$premium</td></tr>";
     }
     echo "</table>";
 }
