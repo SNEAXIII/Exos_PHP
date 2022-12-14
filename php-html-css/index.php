@@ -22,6 +22,6 @@
     <li><i class="fa-regular fa-star"></i><a href="index.php">Chaine de caractère</a></li>
     <li><i class="fa-regular fa-star"></i><a href="chaine.php">Variable</a></li>
     <li><i class="fa-regular fa-star"></i><a href="">Structures conditionelles</a></li>
-    <li><i class="fa-regular fa-star"></i><a href="">Tableaux</a></li>
+    <li><i class="fa-regular fa-star"></i><a href="tableaux.php">Tableaux</a></li>
 </body>
 </html>

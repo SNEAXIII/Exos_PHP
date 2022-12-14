@@ -1,0 +1,2 @@
+Condition PHP oneliner (Ternaire)
+$variable = CONDITION ? ifTrue : ifFalse

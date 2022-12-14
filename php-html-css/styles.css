@@ -40,3 +40,15 @@ i
     color: blue;
     font-size: 20px;
 }
+.vert
+{
+    background: green;
+    color: white;
+    font-weight: bold;
+}
+.rouge
+{
+    background: red;
+    color: white;
+    font-weight: bold;
+}

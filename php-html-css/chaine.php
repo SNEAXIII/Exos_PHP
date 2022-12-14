@@ -1,5 +1,6 @@
 <?php
     $age = 19;
+    $couleur = $age>=18 ? '"vert"':'"rouge"';
 ?>
 
 <!doctype html>
@@ -18,15 +19,10 @@
 </head>
 <body>
 <h1>Les variables</h1>
-<a href="index.php">Retour</a>
-<p>je m'appelle <span class="texte-gras"><?= strtoupper("biscuits") ?> est</span>
-    <?php
-        if ($age>18) {
-            echo "majeur";
-        } else {
-            echo "mineur";
-        }
-    ?>
+<a href="index.php">Retour</a><br>
+<h2>Utilisation des ternaires</h2>
+<p>
+    <span class="texte-gras"><?=strtoupper("biscuits")?></span > est <span class=<?=$couleur?>>majeur</span>
 </p>
 </body>
 </html>
