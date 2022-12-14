@@ -18,17 +18,31 @@ const tableauNo2 = [
         ["Prenom" => "Python","Nom" => "Man","Email" => "PythonMan@test.com","Premium" => True],
 ];
 function afficheTableauTable() {
+    $classeFlexbox = '"flexbox"';
+    $classeButton = '"button"';
     echo "<table><tr>";
     foreach (tableauNo2[0] as $key => $item) {
         echo "<th>$key</th>";
     }
+    echo "<th>Actions</th>";
     echo "</tr>";
     foreach (tableauNo2 as $item) {
-        $prenom = $item["Prenom"];
-        $nom = $item["Nom"];
-        $email = $item["Email"];
-        $premium = $item["Premium"];
-        echo "<tr><td>$prenom</td><td>$nom</td><td>$email</td><td>$premium</td></tr>";
+        $prenom = $item["Prenom"]; $nom = $item["Nom"]; $email = $item["Email"];
+        $premium = $item["Premium"]?"Oui":"Non";
+        $labelPremium = $item["Premium"]?'<span class="labelPremium">Premium</span>':"";
+        echo "
+            <tr>
+                <td>$prenom</td>
+                <td>$nom</td>
+                <td>$email</td>
+                <td>$premium</td>
+                <td class=$classeFlexbox>
+                    <span class=$classeButton>Supprimer</span>
+                    <span class=$classeButton>Modifier</span>
+                    $labelPremium
+                </td>
+            </tr>
+            ";
     }
     echo "</table>";
 }
