@@ -23,5 +23,6 @@
     <li><i class="fa-regular fa-star"></i><a href="chaine.php">Variable</a></li>
     <li><i class="fa-regular fa-star"></i><a href="">Structures conditionelles</a></li>
     <li><i class="fa-regular fa-star"></i><a href="tableaux.php">Tableaux</a></li>
+    <li><i class="fa-regular fa-star"></i><a href="page.php">Page</a></li>
 </body>
 </html>
