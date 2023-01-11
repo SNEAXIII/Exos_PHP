@@ -10,9 +10,12 @@
 <body>
 <?php
 //var_dump($_SERVER);
-$timestamp = ($_SERVER["REQUEST_TIME"]);
-echo "On est le ".date("d M Y",$timestamp)
+
 ?>
+<a href="scriptSuite.php?biscuits=Oreos&accompagnement=Lait">Oreos</a>
+<a href="scriptSuite.php?biscuits=Cookies&accompagnement=Chocolat">Cookies</a>
+<a href="scriptSuite.php?biscuits=">Test vide</a>
+<a href="index.php">Retour</a>
 </body>
 </html>
 

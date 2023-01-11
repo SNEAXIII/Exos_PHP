@@ -21,13 +21,13 @@ function afficheTableauTable() {
     $classeFlexbox = '"flexbox"';
     $classeButton = '"button"';
     echo "<table><tr>";
-    foreach (tableauNo2[0] as $key => $item) {
-        echo "<th>$key</th>";
-    }
+    foreach (tableauNo2[0] as $key => $item) {echo "<th>$key</th>";}
     echo "<th>Actions</th>";
     echo "</tr>";
     foreach (tableauNo2 as $item) {
-        $prenom = $item["Prenom"]; $nom = $item["Nom"]; $email = $item["Email"];
+        $prenom = $item["Prenom"];
+        $nom = $item["Nom"];
+        $email = $item["Email"];
         $premium = $item["Premium"]?"Oui":"Non";
         $labelPremium = $item["Premium"]?'<span class="labelPremium">Premium</span>':"";
         echo "

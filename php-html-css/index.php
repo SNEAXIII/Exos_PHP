@@ -1,3 +1,6 @@
+<?php
+include_once "titre.php";
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -13,7 +16,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Cour d'introduction a PHP-Web</h1>
+<?php afficheTitre("Cour d'introduction a PHP-Web") ?>
 <p id="bienvenue">
     <i class="fa-brands fa-php"></i>Bienvenue sur le tuto du langage PHP
 </p>

@@ -24,13 +24,20 @@ th
 {
     display: flex;
 }
+.button,.labelPremium{
+    cursor: pointer;
+}
 .button
 {
     margin: 5px;
     padding: 10px;
     color: white;
-    background: #fd7e50;
+    background: #ff5c22;
     border-radius: 15px;
+    transition: background 300ms;
+}
+.button:hover{
+    background: #fd7e50;
 }
 .labelPremium
 {

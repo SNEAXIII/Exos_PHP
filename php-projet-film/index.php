@@ -1,7 +1,7 @@
 <?php
 include_once "./donnees/films.php";
 include_once "fonctions.php";
-
+$listeFilms = $filmsTable;
 ?>
 
 <!doctype html>
@@ -18,26 +18,9 @@ include_once "fonctions.php";
     <title>Liste des films</title>
 </head>
 <body>
-<div class="card">
-    <div class="card-header">
-        <img class="card-img" src="<?php echo "./images/".$filmsTable[0]["affiche"] ?>" alt="">
-    </div>
-    <div class="card-body">
-        <span class="card-title"><?php echo $filmsTable[0]["titre"] ?></span>
-        <ul class="card-info-time">
-            <li class="card-date">
-                <i class="fa-solid fa-calendar-days"></i>
-                <span><?php echo $filmsTable[0]["annee"] ?></span>
-            </li>
-            <li class="card-duration">
-                <i class="fa-regular fa-clock"></i>
-                <span><?php echo $filmsTable[0]["duree"] ?></span>
-            </li>
-        </ul>
-        <span class="card-btn-detail">
-            <a href="#">Voir</a>
-        </span>
-    </div>
-</div>
+    <h1>Liste des films de la semaine</h1>
+    <section>
+        <?php parcourFilms($listeFilms) ?>
+    </section>
 </body>
 </html>
