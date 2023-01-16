@@ -11,8 +11,9 @@ body {
     display: grid;
     border: solid 2px blue;
     width:95%;
+    height: 2000px  ;
     margin: 10px auto;
-    grid-template: repeat(6,1fr)/repeat(4,1fr);
+    grid-template: repeat(6,1fr )/repeat(3,1fr);
     grid-gap: 20px;
 }
 .item {
@@ -22,20 +23,21 @@ body {
     font-weight: bold;
 }
 .item1 {
- background-color: #ff0000;
+    background-color: #ff0000;
+    grid-area: 2/2/3/3;
 }
 .item2 {
- background-color: #00ff81;
+    background-color: #00ff81;
 }
 .item3 {
- background-color: #5500ff;
+    background-color: #5500ff;
 }
 .item4 {
- background-color: #ff00dd;
+    background-color: #ff00dd;
 }
 .item5 {
- background-color: #ffc400;
+    background-color: #ffc400;
 }
 .item6 {
- background-color: #ff6a00;
+    background-color: #ff6a00;
 }
