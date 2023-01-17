@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grille {
+    font-family: "Roboto", serif;
+    display: grid;
+    grid-template: 30fr repeat(2, 10fr) 10fr / repeat(2, 1fr);
+    width: 400px;
+    height: 500px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+.image {
+    grid-area: 1/1/2/3;
+    width: 100%;
+    height: auto;
+}
+
+.pays, .nbPortes, .consoEssence, .prix {
+    font-size: 16px;
+    display: flex;
+    margin: auto;
+
+}
+
+.pays i, .nbPortes i, .consoEssence i, .prix i, .pays p, .nbPortes p, .consoEssence p, .prix p {
+    /*display: inline;*/
+    padding: 0 5px;
+}

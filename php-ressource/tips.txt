@@ -27,7 +27,7 @@ grid-template: y/x --> genere les lignes puis les colonnes
 grid-[row|column]-start: nb --> sélectionne la nb colonne/ligne du début
 grid-[row|column]-end: nb+1 --> sélectionne la nb colonne/ligne de la fin
 grid-[row|column]: nb1/nb2+1 --> sélectionne de nb1 a nb2
-grid-area: y1/x1+1/y2/x2+1 --> sélectionne de la ligne y1 à la y2 et de la colonne x1 à la x2
+grid-area: y1/x1/y2+1/x2+1 --> sélectionne de la ligne y1 à la y2 et de la colonne x1 à la x2
 Xfr --> coef similaire a "flex : nb"
 }
 
