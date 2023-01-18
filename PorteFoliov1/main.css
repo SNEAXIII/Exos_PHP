@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+*{
+    font-family: 'Roboto Flex', sans-serif;
+    color: #ffffff;
+}
+a{
+    text-decoration: unset;
+    cursor: pointer;
+}
+body{
+    /*https://www.heroscreen.cc/2021/02/laptop-wallpaper-1080p.html*/
+    background: url(images/wallpaper.jpg) no-repeat;
+    background-size:100%;
+    margin-top: 25px;
+}
+ol
+{
+    list-style: none;
+}
+

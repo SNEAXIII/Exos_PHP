@@ -1,0 +1,118 @@
+/*html{*/
+/*    background: green;*/
+/*    z-index: 0;*/
+/*}*/
+main
+{
+    /*border: solid 1px red;*/
+    /*position: relative;*/
+    margin: auto;
+    width: 95%;
+    height: auto;
+}
+h1
+{
+    padding: 55px 0;
+    font-size: 40px;
+    /*display:inline;*/
+    margin: auto;
+    text-align: center ;
+}
+
+section
+ {
+     margin: 20px 0;
+     font-size: 20px;
+     display: flex;
+     justify-content: space-evenly;
+     /*font-family: 'Roboto Flex', sans-serif;*/
+ }
+article
+ {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+    height: 550px;
+    flex-direction: column;
+    /*border: chocolate 2px dotted;*/
+    color: white;
+    font-weight: bold;
+    background: rgba(211, 211, 211, 0.24);
+    border-radius: 20px;
+    transition: background 500ms;
+ }
+article:hover
+{
+    background: rgba(211, 211, 211, 0.45);
+}
+.cadreImage
+{
+    width: 100%;
+    height: 300px;
+    /*border: 1px solid black;*/
+    display: flex;
+
+}
+
+.imageIllustration
+{
+    margin:auto;
+    /*position: relative;*/
+    border: solid 1px white;
+    /*position:relative;*/
+    width: auto;
+    height: 300px;
+    transition: scale 500ms ,border 200ms;
+    cursor: pointer;
+}
+.imageIllustration:hover
+{
+    border: solid 1px black;
+}
+.imageIllustration:active
+{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    scale: 2.3;
+    border: solid 1px black;
+}
+.titreDescription
+{
+    flex:1;
+    padding: 17px 0;
+    text-decoration: underline;
+    /*padding: 20px 0;*/
+    font-size: 1.7em;
+    margin: auto;
+    text-align: center;
+}
+.languageUtilise{
+    flex:1;
+    padding: 10px 0;
+    margin: auto;
+    font-size: 1.2em;
+    text-align: center;
+}
+.infoBonus{
+    /*flex:1;*/
+    /*text-decoration: underline;*/
+    display: block;
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px auto;
+    font-size: 1.2em;
+    text-align: center;
+    color: #ffffff;
+    background: rgba(0, 177, 255, 0.25);
+    transition: background 200ms, color 200ms, border 200ms;
+}
+.infoBonus:hover{
+    background: rgba(0, 51, 255, 0.65);
+    color: black;
+    border: solid 1px black;
+}

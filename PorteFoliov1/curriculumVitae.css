@@ -1,0 +1,54 @@
+section {
+    display: flex;
+    width: 95%;
+    height: 750px;
+    margin: 40px auto;
+    font-size: 17px;
+    /*border: solid 1px greenyellow;*/
+}
+section article
+{
+    display: flex;
+    padding : 25px;
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+    /*border:solid 2px white;*/
+}
+h1
+{
+    margin: 10px 0;
+    font-size: 25px;
+    display: inline-block;
+}
+h2
+{
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    display: inline-block;
+}
+p
+{
+    margin: 15px 0;
+    display: inline-block;
+    padding-left: 20px;
+}
+.date
+{
+    text-decoration: underline;
+}
+ol
+{
+    margin: 10px 0;
+    padding-left: 20px;
+}
+li
+{
+    margin: 10px 0;
+    padding-left: 20px;
+}
+ul li a
+{
+    text-decoration: underline;
+}

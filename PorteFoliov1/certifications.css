@@ -1,0 +1,24 @@
+section {
+    display: flex;
+    padding: 15px;
+    width: 95%;
+    height: 750px;
+    margin: 40px auto;
+    font-size: 17px;
+    /*border: solid 1px greenyellow;*/
+    flex-direction: column;
+}
+section h1
+{
+    margin: 20px 0;
+    font-size: 25px;
+    display: inline-block;
+}
+section a
+{
+    text-decoration: underline;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-size: 20px;
+    display: inline-block;
+}

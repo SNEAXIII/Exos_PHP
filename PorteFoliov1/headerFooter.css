@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'heroes_legend';
+    src: url('font/heroes_legend-webfont.woff2') format('woff2'),
+    url('font/heroes_legend-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+#nom_premon
+{
+    color: white;
+    width: 199px;
+    font-size: 25px;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+.flexbox
+{
+    width: 95%;
+    display: flex;
+    margin: auto;
+    /*background: rgba(255, 0, 0, 0.46);*/
+}
+nav
+{
+    flex-wrap: wrap;
+    position: relative;
+    right: 0;
+    justify-content:flex-end;
+}
+.itemActuel
+{
+    color: orange;
+}
+.itemNonActuel
+{
+    color: #ffffff;
+}
+.item
+{
+    cursor: pointer ;
+    font-size: 0.8em;
+    text-align: center;
+    flex:1;
+    max-width: 190px;
+    margin: 4px 10px ;
+    font-family: "heroes_legend", serif;
+    transition: color 300ms;
+}
+.item:hover
+{
+    color: red;
+}
+#pp
+{
+    size: 50px;
+    object-fit: none;
+    border-radius: 26px ;
+    margin:0 15px 10px 0
+}
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 97%;
+    margin:auto;
+    font-size: 23px;
+    /*border: solid 2px red;*/
+}
+footer div
+{
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+footer div a
+{
+    text-decoration: underline;
+}
