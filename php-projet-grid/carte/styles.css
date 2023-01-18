@@ -7,29 +7,49 @@
 }
 
 .grille {
-    font-family: "Roboto", serif;
+    font-family: "Poppins", serif;
     display: grid;
-    grid-template: 30fr repeat(2, 10fr) 10fr / repeat(2, 1fr);
+    grid-template-columns:repeat(2, 1fr); /*30fr repeat(2, 10fr) 10fr /*/
     width: 400px;
-    height: 500px;
-    border-radius: 5px;
-    border: solid 1px black;
+    grid-row-gap: 15px;
+    background-color: #f9f7f6;
 }
 
 .image {
     grid-area: 1/1/2/3;
     width: 100%;
     height: auto;
+    border-radius: 10px 10px 0 0;
 }
 
 .pays, .nbPortes, .consoEssence, .prix {
-    font-size: 16px;
+    font-size: 18px;
     display: flex;
     margin: auto;
-
 }
 
 .pays i, .nbPortes i, .consoEssence i, .prix i, .pays p, .nbPortes p, .consoEssence p, .prix p {
-    /*display: inline;*/
     padding: 0 5px;
+    margin: auto;
+}
+
+.pays i, .nbPortes i, .consoEssence i, .prix i {
+    color: orange;
+}
+
+.contact {
+    grid-column: 1/-1;
+    background-color: orange;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 20px 5px;
+    text-transform: uppercase;
+    transition: background-color 250ms;
+}
+
+.contact:hover {
+    background-color: #fdbf5a;
 }

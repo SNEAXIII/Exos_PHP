@@ -1,0 +1,46 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+    border: solid 1px black;
+}
+
+.carte {
+    background-color: #f9f7f6;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+    grid-row-gap: 10px;
+}
+
+.image {
+    grid-area: 1/1/2/3;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+i {
+    color: orange;
+    margin: 5px;
+}
+
+.pays, .caracteristiques, .consommation, .prix {
+    font-size: 18px;
+    display: flex;
+    margin: auto;
+}
+
+.pays i, .nbPortes i, .consoEssence i, .prix i {
+    color: orange;
+}
