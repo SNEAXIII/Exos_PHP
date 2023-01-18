@@ -53,6 +53,10 @@ les structure{
 <article> : article indépendant;
 }
 
+pour faire du responsive {
+grid-template-column: repeat(auto-fit,minmax(150px,300px))
+}
+
 liste balises : https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/1608357-memento-des-balises-html
 strat ultime pour les croissants --> http://www.thelin.net/laurent/labo/html/mailto.html
 
