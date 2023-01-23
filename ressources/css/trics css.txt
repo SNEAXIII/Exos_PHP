@@ -61,4 +61,7 @@ liste balises : https://openclassrooms.com/fr/courses/1603881-creez-votre-site-w
 strat ultime pour les croissants --> http://www.thelin.net/laurent/labo/html/mailto.html
 
 pour apprendre les grid --> https://cssgridgarden.com/
+                            https://css-tricks.com/snippets/css/complete-guide-grid/
+
 pour apprendre les flexbox --> https://flexboxfroggy.com/
+                               https://css-tricks.com/snippets/css/a-guide-to-flexbox/
