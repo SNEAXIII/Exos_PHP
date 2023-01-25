@@ -25,10 +25,10 @@ section {
     border: orange solid 1px;
     display: grid;
     gap: 10px;
-    grid-template-rows: repeat(auto-fit, minmax(300px,1fr));
+    /*grid-template-rows: repeat(auto-fit, minmax(300px,1fr));*/
 }
 article {
-    width: 100%;
+    width: 300px;
     display: grid;
 }
 .card-img{

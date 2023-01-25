@@ -1,5 +1,6 @@
 <?php
-include_once 'fonctions.php';
+include_once 'src\modele\etudiantDB.php';
+$students = selectAllStudent();
 ?>
 <!doctype html>
 <html lang=fr>
@@ -17,6 +18,14 @@ include_once 'fonctions.php';
     header
 </header>
 <section>
+    <?php foreach ($students)
+    <article>
+        <img class='card-img' src='etudiant.png' alt=''>
+        <div class='card-footer'>
+            <span class='name_surname_birth'>$name $surname $birth</span>
+            <a target='_blank' href='#' class='card-button'>Voir plus d'informations</a>
+        </div class='card-header'>
+    </article>
     <?php
     displayStudents();
     ?>
