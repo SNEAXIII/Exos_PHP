@@ -18,17 +18,25 @@ $students = selectAllStudent();
     header
 </header>
 <section>
-    <?php foreach ($students)
+    <?php foreach ($students as $student) {
+        $name = $student["prenom_etudiant"];
+        $surname = $student["nom_etudiant"];
+        $birth = $student["date_naissance_etudiant"];
+        /*
+        //    $id = $student["id_etudiant"];
+        //    $email = $student["email_etudiant"];
+        //    $adress = $student["adresse_etudiant"];
+        //    $phone = $student["tel_etudiant"];
+        */
+    ?>
     <article>
         <img class='card-img' src='etudiant.png' alt=''>
         <div class='card-footer'>
-            <span class='name_surname_birth'>$name $surname $birth</span>
+            <span class='name_surname_birth'><?="$name $surname $birth"?></span>
             <a target='_blank' href='#' class='card-button'>Voir plus d'informations</a>
         </div class='card-header'>
     </article>
-    <?php
-    displayStudents();
-    ?>
+    <?php }?>
 </section>
 <footer>
     footer
