@@ -1,4 +1,12 @@
 <!doctype html>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $rue = $_POST["rue"];
+    $codePostal = $_POST["code-postal"];
+    $ville = $_POST["ville"];
+    echo "$rue $codePostal $ville";
+}
+?>
 <html lang=fr>
 <head>
     <meta charset="UTF-8">
@@ -10,7 +18,15 @@
 </head>
 <body>
     <div class="container">
-
+        <form action="" method="post">
+            <label for="rue">Rue</label>
+            <input type="text" id="rue" name="rue">
+            <label for="code-postal">Code Postal</label>
+            <input type="text" id="code-postal" name="code-postal">
+            <label for="ville">Ville</label>
+            <input type="text" id="ville" name="ville">
+            <input type="submit" value="Envoyer">
+        </form>
     </div>
 </body>
 </html>

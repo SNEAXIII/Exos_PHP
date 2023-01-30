@@ -24,7 +24,7 @@ include_once "titre.php";
 <ul id="menu">
     <li><i class="fa-regular fa-star"></i><a href="index.php">Chaine de caractère</a></li>
     <li><i class="fa-regular fa-star"></i><a href="chaine.php">Variable</a></li>
-    <li><i class="fa-regular fa-star"></i><a href="">Structures conditionelles</a></li>
+    <li><i class="fa-regular fa-star"></i><a href="formulaire\index.php">Formulaire</a></li>
     <li><i class="fa-regular fa-star"></i><a href="tableaux.php">Tableaux</a></li>
     <li><i class="fa-regular fa-star"></i><a href="page.php">Page</a></li>
 </body>
