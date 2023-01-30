@@ -1,8 +1,7 @@
 <?php
 include_once 'src\modele\etudiantDB.php';
 function displayStudents() : void {
-//    $students = selectAllStudent();
-//    displayStudent($students);
+
     foreach (selectAllStudent() as $student) {
         displayStudent($student);
     }
@@ -10,11 +9,7 @@ function displayStudents() : void {
 function displayStudent(array $student) : void {
     $name = $student["prenom_etudiant"];
     $surname = $student["nom_etudiant"];
-//    $id = $student["id_etudiant"];
-//    $email = $student["email_etudiant"];
     $birth = $student["date_naissance_etudiant"];
-//    $adress = $student["adresse_etudiant"];
-//    $phone = $student["tel_etudiant"];
     echo
     "
         <article>
@@ -24,5 +19,5 @@ function displayStudent(array $student) : void {
                 <a target='_blank' href='#' class='card-button'>Voir plus d'informations</a>
             </div class='card-header'>
         </article>
-        ";
+    ";
 }
