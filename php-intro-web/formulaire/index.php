@@ -4,41 +4,51 @@
 $rue = null;
 $codePostal = null;
 $ville = null;
+$photo = null;
 $erreurs = [];
 
 //--> Si la requete est de type post, on traite les données
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//    $rue = $_POST["rue"];
-//    $codePostal = $_POST["code-postal"];
-//    $ville = $_POST["ville"];
-//    echo "$rue $codePostal $ville";
 //    -->Tester si tout les champs obligatoire sont saisis
+    if (empty(trim($_POST["rue"])))
+        {$erreurs["rue"] = "La rue est obligatoire";}
+    else
+        {$rue = trim($_POST["rue"]);}
 
-    if (empty($_POST["rue"])) {
-        $erreurs["rue"] = "La rue est obligatoire";
-    } else {
-        $rue = $_POST["rue"];
-    }
+    if (empty(trim($_POST["code-postal"])))
+        {$erreurs["code-postal"] = "Le code postal est obligatoire";}
+    else
+        {$codePostal = trim($_POST["code-postal"]);}
 
-    if (empty($_POST["code-postal"])) {
-        $erreurs["code-postal"] = "Le code postal est obligatoire";
-    } else {
-        $codePostal = $_POST["code-postal"];
-    }
-
-    if (empty($_POST["ville"])) {
-        $erreurs["ville"] = "La ville est obligatoire";
-    } else {
-        $ville = $_POST["ville"];
-    }
+    if (empty(trim($_POST["ville"])))
+        {$erreurs["ville"] = "La ville est obligatoire";}
+    else
+        {$ville = trim($_POST["ville"]);}
+    if (empty($_FILES["photo"]["name"]))
+        {$erreurs["photo"] = "La Photo est obligatoire";}
+    else
+        {
+        $nomFichier = $_FILES["photo"]["name"];
+        $typeFichier = $_FILES["photo"]["type"];
+        $tmpFichier = $_FILES["photo"]["tmp_name"];
+        $tailleFichier = $_FILES["photo"]["size"];
+//        -->Teste si le fichier est une image
+        if (!str_contains($typeFichier,"image")) {
+            $erreurs["photo"] = "Le fichier n'est pas une image";
+        } else {
+            $nomFichierRandomise = uniqid().".".pathinfo($nomFichier,PATHINFO_EXTENSION);
+             if ($tailleFichier > 1000*1024) {
+                $erreurs["photo"] = "L'image est trop lourde";
+             } elseif (!move_uploaded_file($tmpFichier,"./images/$nomFichierRandomise")) {
+             $erreurs["photo"] = "Le fichier n'a pas pu être enregistré";
+             }
+        }
+}
     if (empty($erreurs)) {
 //        -->Inserer dans la bdd
-
 //        -->Faire la redirection
         header("location: ../index.php");
     }
-
-
 }
 ?>
 <html lang=fr>
@@ -52,27 +62,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container">
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
 
             <label for="rue">Rue*</label>
             <input type="text" id="rue" name="rue" value="<?= $rue?>">
-            <?php
-            if (isset($erreurs["rue"])) {
-                echo "<p class='erreur-validation'>".$erreurs["rue"]."</p>";
-            }?>
+            <?php if (isset($erreurs["rue"])) {
+                echo "<p class='erreur-validation'>".$erreurs["rue"]."</p>";}?>
             <label for="code-postal">Code Postal*</label>
             <input type="text" id="code-postal" name="code-postal" value="<?= $codePostal?>">
-            <?php
-            if (isset($erreurs["code-postal"])) {
-                echo "<p class='erreur-validation'>".$erreurs["code-postal"]."</p>";
-            }?>
+            <?php if (isset($erreurs["code-postal"])) {
+                echo "<p class='erreur-validation'>".$erreurs["code-postal"]."</p>";}?>
             <label for="ville">Ville*</label>
             <input type="text" id="ville" name="ville" value="<?= $ville?>">
-            <?php
-            if (isset($erreurs["ville"])) {
-                echo "<p class='erreur-validation'>".$erreurs["ville"]."</p>";
-            }
-            ?>
+            <?php if (isset($erreurs["ville"])) {
+                echo "<p class='erreur-validation'>".$erreurs["ville"]."</p>";}?>
+            <input type="file" id="photo" name="photo">
+            <?php if (isset($erreurs["photo"])) {
+                echo "<p class='erreur-validation'>".$erreurs["photo"]."</p>";}?>
             <p>* : Champs obligatoires</p>
             <input type="submit" value="Envoyer">
         </form>
