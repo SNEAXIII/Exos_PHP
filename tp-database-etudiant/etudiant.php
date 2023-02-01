@@ -19,13 +19,11 @@ $student = selectStudentById($id);
         header
     </header>
     <section>
-
         <article>
             <img class='card-img' src='etudiant.png' alt=''>
             <span class='name_surname_birth'><?=$student["prenom_etudiant"]?> <?=$student["nom_etudiant"]?> <?=$student["date_naissance_etudiant"]?></span>
             <a target='_blank' href='' class='card-button'>Voir plus d'informations</a>
         </article>
-        
     </section>
     <footer>
         footer

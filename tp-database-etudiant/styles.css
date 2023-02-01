@@ -1,25 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, serif;
-    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
-
 screen {
     display: grid;
     height: 100vh;
-    padding: 10px;
-    grid-template-rows: 50px 1fr 50px;
+    grid-template-rows: 100px 1fr 50px;
     row-gap: 10px;
-
 }
-
 header, footer {
     width: 100%;
     height: 100%;
     display: flex;
     border: dotted 1px red;
+}
+header {
+    background: rgb(83,51,237);
+    background: linear-gradient(144deg, rgba(83,51,237,1) 0%, rgba(44,212,217,1) 100%);
 }
 section {
     border: orange solid 1px;
