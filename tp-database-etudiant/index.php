@@ -22,6 +22,7 @@ $students = selectAllStudent();
         $name = $student["prenom_etudiant"];
         $surname = $student["nom_etudiant"];
         $birth = $student["date_naissance_etudiant"];
+        $age = 18;
     ?>
     <article>
         <img class='card-img' src='etudiant.png' alt=''>
