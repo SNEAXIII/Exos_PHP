@@ -1,33 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-@media screen and (max-width: 720px) {
-    /*body {*/
-    /*    grid-template-rows: none;*/
-    /*}*/
+    font-size:62.5%;
+    font-family: 'Oswald', sans-serif;
+}   
+@media screen and (max-width: 50rem) {
     header, nav ul {
         flex-direction: column;
     }
     nav ul li {
-        padding: 5px 0 5px 0;
+        padding: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+    #logo{
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 body {
     width: 90vw;
     height: 100vh;
     margin: 4vh auto;
-    /*display: grid;*/
-    /*grid-template-areas:"head"*/
-    /*                    "nav"*/
-    /*                    "content"*/
-    /*                    "footer";*/
-    /*grid-template-rows: 20vh;*/
-    /*grid-gap: 10px;*/
-    /*border: black solid 2px;*/
     background-color: #e8e8e8;
+    border: solid 3px red;
 }
 header {
     width: 100%;
@@ -36,10 +33,9 @@ header {
     justify-content: space-between;
 }
 #logo {
-    margin: 10px;
+    padding: 0.5rem;
     height: 100%;
-    max-width: 150px;
-    /*width: auto;*/
+    max-width: 15rem;
 }
 nav {
 
@@ -49,18 +45,24 @@ nav ul{
     height: 100%;
     list-style: none;
     flex-wrap: wrap ;
-    align-items: stretch;
-    /*justify-content: flex-end;*/
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
 }
 nav ul li {
     display: block;
-    margin: 0 10px;
-    font-size: 30px;
+    margin: 0 1rem;
+    font-size: 3rem;
     text-transform: uppercase;
-    padding: 70px 0 0 0;
+    padding: 1rem 0;
     cursor: copy;
 }
 
 span {
     color: red;
+}
+
+.imagePrincipale {
+    margin: auto;
+    width: 97%;
 }
