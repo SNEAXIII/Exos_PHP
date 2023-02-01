@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*font-size:62.5%;*/
 }
 
 .container {
@@ -37,4 +38,10 @@ form > input[type=submit] {
     border-radius: 5px;
     cursor:pointer;
     margin-top: 25px;
+}
+
+.erreur-validation {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }

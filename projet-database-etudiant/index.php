@@ -21,14 +21,7 @@ $students = selectAllStudent();
     <?php foreach ($students as $student) {
         $name = $student["prenom_etudiant"];
         $surname = $student["nom_etudiant"];
-        $birth = $student["date_naissance_etudiant"];
-        /*
-        //    $id = $student["id_etudiant"];
-        //    $email = $student["email_etudiant"];
-        //    $adress = $student["adresse_etudiant"];
-        //    $phone = $student["tel_etudiant"];
-        */
-    ?>
+        $birth = $student["date_naissance_etudiant"];?>
     <article>
         <img class='card-img' src='etudiant.png' alt=''>
         <div class='card-footer'>
