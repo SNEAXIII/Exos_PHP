@@ -26,10 +26,11 @@ $students = selectAllStudent();
     ?>
     <article>
         <img class='card-img' src='etudiant.png' alt=''>
-        <div class='card-footer'>
-            <span class='name_surname_birth'><?="$name $surname $birth"?></span>
-            <a href='./etudiant.php?id=<?= $student["id_etudiant"]?>' class='card-button'>Voir plus d'informations</a>
-        </div class='card-header'>
+        <span class='surname'><?="$surname"?></span>
+        <span class='name'><?="$name"?></span>
+        <span class='birth'><?="$birth"?></span>
+        <span class='age'><?="$age"?></span>
+        <a href='./etudiant.php?id=<?= $student["id_etudiant"]?>' class='card-button'>Voir plus d'informations</a>
     </article>
     <?php }?>
 </section>
