@@ -15,13 +15,14 @@
         <ul>
             <li>nos produits</li>
             <li>nos services</li>
-            <li>a propos</li>
+            <li>à propos</li>
             <li>nous contacter</li>
         </ul>
     </nav>
 </header>
 <section>
-    <img class="imagePrincipale" src="bulk%20bank%20image/batimentwallpaper.png" alt="">
+    <img class="imagePrincipale" src="bulk_bank_image/realisation1.jpg" alt="">
+    <img class="imagePrincipale" src="bulk_bank_image/realisation2.jpg" alt="">
 </section>
 </body>
 </html>

@@ -37,9 +37,6 @@ header {
     height: 100%;
     max-width: 15rem;
 }
-nav {
-
-}
 nav ul{
     display: flex;
     height: 100%;
@@ -55,14 +52,11 @@ nav ul li {
     font-size: 3rem;
     text-transform: uppercase;
     padding: 1rem 0;
-    cursor: copy;
+    cursor: pointer;
 }
-
 span {
     color: red;
 }
-
 .imagePrincipale {
-    margin: auto;
-    width: 97%;
+    width: 100%;
 }
