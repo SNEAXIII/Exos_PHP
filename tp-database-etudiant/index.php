@@ -1,5 +1,6 @@
 <?php
 include_once 'src\modele\etudiantDB.php';
+include_once 'src\utils\fonctions.php';
 $students = selectAllStudent();
 ?>
 <!doctype html>
@@ -21,15 +22,17 @@ $students = selectAllStudent();
     <?php foreach ($students as $student) {
         $name = $student["prenom_etudiant"];
         $surname = $student["nom_etudiant"];
-        $birth = $student["date_naissance_etudiant"];
-        $age = 18;
+        $birth = formateDate($student["date_naissance_etudiant"]);
+        $tableauAge = calculeAgeEtudiant($student["date_naissance_etudiant"]);
+        $age = $tableauAge["age"];
+        $color = $tableauAge["couleur"] ;
     ?>
     <article>
         <img class='card-img' src='etudiant.png' alt=''>
         <span class='surname'><?="$surname"?></span>
         <span class='name'><?="$name"?></span>
-        <span class='birth'><?="$birth"?></span>
-        <span class='age'><?="$age"?></span>
+        <span class='birth'>Né le <?="$birth"?></span>
+        <span class='age' style="color: <?="$color"?>"><?="$age"?> ans</span>
         <a href='./etudiant.php?id=<?= $student["id_etudiant"]?>' class='card-button'>Voir plus d'informations</a>
     </article>
     <?php }?>
