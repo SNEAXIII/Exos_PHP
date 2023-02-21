@@ -39,6 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST'){
 <body>
 <container>
     <form-container>
+        <div class="box-pp"><img id="pp" src="pp.png" alt="hehe"></div>
+
         <h1>Catégorie</h1>
         <form method="post">
             <label for="categorie">Catégorie stat</label>
