@@ -14,16 +14,3 @@ function createConnection() : PDO {
         die("Error : ".$erreur->getMessage());
     }
 }
-/*
-function exemple(){}
-function exemple(){}
-function exemple(){}
-function exemple(){}
-function exemple(){}
-function exemple(){}
-function exemple(){}
-function exemple(){}
-function exemple(){}
-function exemple(){}
-function exemple(){}
-*/

@@ -11,16 +11,21 @@ $student = selectStudentById($id);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <title>Des jolis étudiants</title>
+    <title>Fiche étudiant</title>
 </head>
 <body>
 <screen>
     <header>
-        header
+        <img id="logo" src="logo-BS.png" alt="logo">
+        <nav>
+            <a href="index.php" class="itemActuel item">Accueil</a>
+            <a href="ajoutEtudiant.php" class="itemNonActuel item">nouvel étudiant</a>
+            <a href="contact.php" class="itemNonActuel item">Contact</a>
+        </nav>
     </header>
     <section>
         <article>
-            <img class='card-img' src='etudiant.png' alt=''>
+            <img class='card-img' src='src/img/etudiant.png' alt=''>
             <span class='name_surname_birth'><?=$student["prenom_etudiant"]?> <?=$student["nom_etudiant"]?> <?=$student["date_naissance_etudiant"]?></span>
             <a target='_blank' href='' class='card-button'>Voir plus d'informations</a>
         </article>

@@ -1,4 +1,5 @@
 <?php
+include_once 'src\modele\etudiantDB.php';
 
 function calculeAgeEtudiant(string $dateNaissance) : array
 {

@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mariadb://localhost:3306/db_etudiants</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="db_etudiants@localhost [2]" uuid="22e28151-0193-4295-aae1-5b5c3100755e">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://localhost:3306/db_etudiants</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

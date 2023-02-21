@@ -6,47 +6,85 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }
+html {
+    background-color: grey;
+}
 a {
     color: black;
+    cursor: pointer;
 }
-/*@media screen and (max-width: 1000px) {*/
-/*    header, nav ul {*/
-/*        flex-direction: column;*/
-/*    }*/
-/*    nav ul li {*/
-/*        padding: 0.5rem 0;*/
-/*        font-size: 1.5rem;*/
-/*    }*/
-/*    #logo{*/
-/*        margin-right: auto;*/
-/*        margin-left: auto;*/
-/*    }*/
-/*}*/
+@font-face {
+    font-family: 'heroes_legend';
+    src: url('src/font/heroes_legend-webfont.woff2') format('woff2'),
+    url('src/font/heroes_legend-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 screen {
     display: grid;
     height: 100vh;
-    grid-template-rows: 100px 1fr 50px;
+    grid-template-rows: 100px 1fr 100px;
     row-gap: 10px;
 }
 header, footer {
     width: 100%;
     height: 100%;
     display: flex;
-    border: dotted 1px red;
+    /*border: dotted 1px red;*/
+}
+header,nav {
+    width: 99.5%;
+    display: flex;
+    margin: 5px auto;
 }
 header {
-    background: rgb(83,51,237);
-    background: linear-gradient(144deg, rgba(83,51,237,1) 0%, rgba(44,212,217,1) 100%);
+    background: rgb(52, 13, 255);
+    background: linear-gradient(170deg, rgb(52, 13, 255) 0%, rgba(44,212,217,1) 100%);
+}
+#logo {
+    padding: 8px;
+}
+nav {
+    flex-wrap: wrap;
+    position: relative;
+    right: 0;
+    justify-content:flex-end;
+    align-items: center;
+}
+.itemActuel
+{
+    color: orange;
+}
+.itemNonActuel
+{
+    color: #ffffff;
+}
+.item
+{
+    cursor: pointer ;
+    font-size: 18px;
+    text-align: center;
+    flex:1;
+    max-width: 250px;
+    margin: 4px 10px ;
+    font-family: "heroes_legend", serif;
+    transition: color 300ms;
+}
+.item:hover
+{
+    color: red;
 }
 section {
-    border: orange solid 1px;
+    margin: 15px;
+    /*border: orange solid 1px;*/
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, 265px);
 }
 article {
+    background-color: #219898;
     width: 100%;
-    height: 400px;
+    height: 420px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: unset;
@@ -54,7 +92,7 @@ article {
     align-items: center;
     grid-template-areas:
     "img img"
-    "nom prenom"
+    "prenom nom"
     "age date"
     "button button"
     ;
@@ -88,6 +126,6 @@ article {
     grid-area: button;
     padding: 15px 10px;
     align-self: center;
-    border: #000000 1px solid;
+    border: black 1px solid;
     border-radius: 5px;
 }

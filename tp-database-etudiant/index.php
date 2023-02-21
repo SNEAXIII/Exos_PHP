@@ -1,6 +1,6 @@
 <?php
 include_once 'src\modele\etudiantDB.php';
-include_once 'src\utils\fonctions.php';
+include_once 'src\utils\dates.php';
 $students = selectAllStudent();
 ?>
 <!doctype html>
@@ -16,25 +16,31 @@ $students = selectAllStudent();
 <body>
 <screen>
 <header>
-    header
+    <img id="logo" src="logo-BS.png" alt="logo">
+    <nav>
+        <a href="index.php" class="itemActuel item">Accueil</a>
+        <a href="ajoutEtudiant.php" class="itemNonActuel item">nouvel étudiant</a>
+        <a href="contact.php" class="itemNonActuel item">Contact</a>
+    </nav>
 </header>
 <section>
     <?php foreach ($students as $student) {
+        $photo = $student["photo_etudiant"];
         $name = $student["prenom_etudiant"];
         $surname = $student["nom_etudiant"];
         $birth = formateDate($student["date_naissance_etudiant"]);
         $tableauAge = calculeAgeEtudiant($student["date_naissance_etudiant"]);
         $age = $tableauAge["age"];
         $color = $tableauAge["couleur"] ;
-    ?>
-    <article>
-        <img class='card-img' src='etudiant.png' alt=''>
-        <span class='surname'><?="$surname"?></span>
-        <span class='name'><?="$name"?></span>
-        <span class='birth'>Né le <?="$birth"?></span>
-        <span class='age' style="color: <?="$color"?>"><?="$age"?> ans</span>
-        <a href='./etudiant.php?id=<?= $student["id_etudiant"]?>' class='card-button'>Voir plus d'informations</a>
-    </article>
+        ?>
+        <article>
+            <img class='card-img' src='db_images/<?=$photo ?>' alt=''>
+            <span class='surname'><?="$surname"?></span>
+            <span class='name'><?="$name"?></span>
+            <span class='birth'><?="$birth"?></span>
+            <span class='age' style="color: <?="$color"?>"><?="$age"?> ans</span>
+            <a href='./etudiant.php?id=<?= $student["id_etudiant"]?>' class='card-button'>Voir plus d'informations</a>
+        </article>
     <?php }?>
 </section>
 <footer>
