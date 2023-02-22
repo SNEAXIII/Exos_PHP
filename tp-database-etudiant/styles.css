@@ -7,11 +7,17 @@
     text-decoration: none;
 }
 html {
-    background-color: grey;
+    background-color: #b6b6b6;
 }
 a {
     color: black;
     cursor: pointer;
+}
+h1 {
+    /*text-align: center;*/
+    display: inline;
+    align-self: center;
+    justify-self: center;
 }
 @font-face {
     font-family: 'heroes_legend';
@@ -23,7 +29,7 @@ a {
 screen {
     display: grid;
     height: 100vh;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 100px 70px 1fr 100px;
     row-gap: 10px;
 }
 header, footer {
@@ -128,4 +134,9 @@ article {
     align-self: center;
     border: black 1px solid;
     border-radius: 5px;
+    background-color: #197979;
+    transition: background-color 300ms;
+}
+.card-button:hover {
+    background-color: #10dede;
 }

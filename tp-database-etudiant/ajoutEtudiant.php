@@ -6,6 +6,8 @@ $nom = null;
 $adresse = null;
 $dateNaissance = null;
 $photo = null;
+$telephone = null;
+$email = null;
 $erreurs = [];
 
 //--> Si la requete est de type post, on traite les données
@@ -26,6 +28,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else
     {$adresse = trim($_POST["adresse"]);}
 
+    if (empty(trim($_POST["telephone"])))
+    {$erreurs["telephone"] = "Le numéro de téléphone est obligatoire";}
+    else
+    {$telephone = trim($_POST["telephone"]);}
+
+    if (empty(trim($_POST["email"])) | !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
+    {$erreurs["email"] = "L'adresse email est obligatoire";}
+    else
+    {$email = trim($_POST["email"]);}
+
     if (empty(trim($_POST["date-naissance"])))
     {$erreurs["date-naissance"] = "La date de naissance est obligatoire";}
     else
@@ -39,9 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $typeFichier = $_FILES["photo"]["type"];
         $tmpFichier = $_FILES["photo"]["tmp_name"];
         $tailleFichier = $_FILES["photo"]["size"];
-        echo $_FILES["photo"]["type"];
 //        -->Teste si le fichier est une image
-        if (!(str_contains($typeFichier,"image/jpeg")|str_contains($typeFichier,"image/png"))) {
+        if (($typeFichier != "image/jpeg")&&($typeFichier!="image/png")) {
             $erreurs["photo"] = "Le fichier n'est pas une image";
         } else {
             $nomFichierRandomise = uniqid().".".pathinfo($nomFichier,PATHINFO_EXTENSION);
@@ -108,10 +119,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php if (isset($erreurs["adresse"])) {
             echo "<p class='erreur-validation'>".$erreurs["adresse"]."</p>";}?>
 
-        <label for="date-naissance">Date de naissance* (sous la forme année-mois-jour)</label>
+        <label for="date-naissance">Date de naissance*</label>
         <input type="date" id="date-naissance" name="date-naissance" value="<?= $dateNaissance?>">
         <?php if (isset($erreurs["date-naissance"])) {
             echo "<p class='erreur-validation'>".$erreurs["date-naissance"]."</p>";}?>
+
+        <label for="telephone">Telephone*</label>
+        <input type="text" id="telephone" name="telephone" value="<?= $telephone?>">
+        <?php if (isset($erreurs["telephone"])) {
+            echo "<p class='erreur-validation'>".$erreurs["telephone"]."</p>";}?>
+
+        <label for="email">Email*</label>
+        <input type="text" id="email" name="email" value="<?= $email?>">
+        <?php if (isset($erreurs["email"])) {
+            echo "<p class='erreur-validation'>".$erreurs["email"]."</p>";}?>
 
         <input type="file" id="photo" name="photo">
         <?php if (isset($erreurs["photo"])) {
