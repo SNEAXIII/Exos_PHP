@@ -25,3 +25,30 @@ p {
 .sousligne{
     text-decoration: underline;
 }
+@media screen and (max-width: 800px) {
+    cadre{
+        flex-direction: column;
+    }
+    screen {
+        grid-template-rows: auto 70px 1fr 100px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    header, nav {
+        flex-direction: column;
+    }
+    nav {
+        padding: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+    #logo{
+        width: 100%;
+        padding: 0 10px;
+        margin:0 auto;
+    }
+    .item {
+        font-size: 26px;
+        max-width: 100%;
+    }
+}

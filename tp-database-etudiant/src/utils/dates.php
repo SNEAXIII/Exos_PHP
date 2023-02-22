@@ -8,6 +8,4 @@ function calculeAgeEtudiant(string $dateNaissance) : array
     return ["age"=>$age,"couleur"=>$couleur];
 }
 function formateDate($dateNaissance) : string
-{
-    return date_create($dateNaissance)->format("d/m/Y");
-}
+{return date_create($dateNaissance)->format("d/m/Y");}

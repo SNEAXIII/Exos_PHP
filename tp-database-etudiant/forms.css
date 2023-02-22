@@ -8,17 +8,14 @@
     width: 90%;
     margin: 70px auto   ;
 }
-
 form {
     margin: 0 auto;
     width: 50%;
     margin-inside: 10px auto;
 }
-
 form > label {
     font-weight: bold;
 }
-
 form > input {
     display: block;
     width: 100%;
@@ -27,7 +24,6 @@ form > input {
     border: solid 1px lightgray;
     border-radius: 5px;
 }
-
 form > input[type=submit] {
     width: 100%;
     background-color: coral;
@@ -42,4 +38,31 @@ form > input[type=submit] {
     color: red;
     font-weight: bold;
     margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 800px) {
+    form {
+        width: 80%;
+    }
+    screen {
+        grid-template-rows: auto 70px 1fr 100px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    header, nav {
+        flex-direction: column;
+    }
+    nav {
+        padding: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+    #logo{
+        width: 100%;
+        padding: 0 10px;
+        margin:0 auto;
+    }
+    .item {
+        font-size: 26px;
+        max-width: 100%;
+    }
 }

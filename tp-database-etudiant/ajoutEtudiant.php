@@ -33,8 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else
     {$telephone = trim($_POST["telephone"]);}
 
-    if (empty(trim($_POST["email"])) | !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
+    if (empty(trim($_POST["email"])))
     {$erreurs["email"] = "L'adresse email est obligatoire";}
+    elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
+    {$erreurs["email"] = "L'adresse email n'est pas valide";}
     else
     {$email = trim($_POST["email"]);}
 
@@ -57,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $nomFichierRandomise = uniqid().".".pathinfo($nomFichier,PATHINFO_EXTENSION);
             if ($tailleFichier > 600*1024) {
-                $erreurs["photo"] = "L'image est trop lourde";
+                $erreurs["photo"] = "L'image est trop lourde, le maximum est 600ko";
             } elseif (!move_uploaded_file($tmpFichier,"./db_images/$nomFichierRandomise")) {
                 $erreurs["photo"] = "Le fichier n'a pas pu être enregistré";
             }
