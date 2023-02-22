@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="forms.css">
-    <title>Formulaire</title>
+    <title>Contact</title>
 </head>
 <body>
 <screen>
@@ -19,7 +19,6 @@
         <a href="contact.php" class="itemActuel item">Contact</a>
     </nav>
 </header>
-
 </screen>
 </body>
 </html>

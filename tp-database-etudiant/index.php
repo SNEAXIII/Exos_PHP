@@ -23,7 +23,7 @@ $students = selectAllStudent();
         <a href="contact.php" class="itemNonActuel item">Contact</a>
     </nav>
 </header>
-<h1>Voici la liste de nos étudiants</h1>
+<h1 style="border-bottom: solid 1px black">Voici la liste de nos étudiants</h1>
 <section>
     <?php foreach ($students as $student) {
         $photo = $student["photo_etudiant"];
@@ -44,9 +44,6 @@ $students = selectAllStudent();
         </article>
     <?php }?>
 </section>
-<footer>
-    footered
-</footer>
 </screen>
 </body>
 </html>
