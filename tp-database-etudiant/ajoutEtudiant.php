@@ -39,12 +39,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $typeFichier = $_FILES["photo"]["type"];
         $tmpFichier = $_FILES["photo"]["tmp_name"];
         $tailleFichier = $_FILES["photo"]["size"];
+        echo $_FILES["photo"]["type"];
 //        -->Teste si le fichier est une image
-        if (!str_contains($typeFichier,"image")) {
+        if (!(str_contains($typeFichier,"image/jpeg")|str_contains($typeFichier,"image/png"))) {
             $erreurs["photo"] = "Le fichier n'est pas une image";
         } else {
             $nomFichierRandomise = uniqid().".".pathinfo($nomFichier,PATHINFO_EXTENSION);
-            if ($tailleFichier > 1000*1024) {
+            if ($tailleFichier > 600*1024) {
                 $erreurs["photo"] = "L'image est trop lourde";
             } elseif (!move_uploaded_file($tmpFichier,"./db_images/$nomFichierRandomise")) {
                 $erreurs["photo"] = "Le fichier n'a pas pu être enregistré";
@@ -108,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<p class='erreur-validation'>".$erreurs["adresse"]."</p>";}?>
 
         <label for="date-naissance">Date de naissance* (sous la forme année-mois-jour)</label>
-        <input type="text" id="date-naissance" name="date-naissance" value="<?= $dateNaissance?>">
+        <input type="date" id="date-naissance" name="date-naissance" value="<?= $dateNaissance?>">
         <?php if (isset($erreurs["date-naissance"])) {
             echo "<p class='erreur-validation'>".$erreurs["date-naissance"]."</p>";}?>
 
