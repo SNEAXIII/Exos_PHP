@@ -1,16 +1,10 @@
 <?php
-// Creer une session
-// ATTENTION: en 1er seulement
+//Acceder a la session
 session_start();
-$_SESSION["prenom"] => "Alexis";
-$_SESSION["nom"] => "Bassigonot";
-$_SESSION["p1"] => "Produit 1";
-$_SESSION["p2"] => "Produit 2";
-$_SESSION["mageur"]=> true;
-$_SESSION["utilisateur"] => "utilisateur";
-$_SESSION["panier"] => [];
-
-
+print_r($_SESSION);
+if (!empty($_SESSION["prenom"])) {
+    $prenom = $_SESSION["prenom"];
+}
 ?>
 <!doctype html>
 <html lang="fr">
@@ -22,8 +16,9 @@ $_SESSION["panier"] => [];
     <title>Document</title>
 </head>
 <body>
-<h1>Session</h1>
+<h1>Utiliser une variable</h1>
 <p>Ce script permet de creer une nouvelle session</p>
-<a href="utiliserSession.php">HEHE</a>
+<a href="creerSession.php">HEHE</a>
+<p><?= isset($prenom)?"Bonjour $prenom":"Vous n'avez pas saisis de prénom" ?></p>
 </body>
 </html>
