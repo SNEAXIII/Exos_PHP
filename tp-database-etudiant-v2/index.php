@@ -15,14 +15,7 @@ $students = selectAllStudent();
 </head>
 <body>
 <screen>
-<header>
-    <img id="logo" src="logo-BS.png" alt="logo">
-    <nav>
-        <a href="index.php" class="itemActuel item">Accueil</a>
-        <a href="ajoutEtudiant.php" class="itemNonActuel item">nouvel étudiant</a>
-        <a href="contact.php" class="itemNonActuel item">Contact</a>
-    </nav>
-</header>
+<?php include_once "header.php"?>
 <h1 style="border-bottom: solid 1px black">Voici la liste de nos étudiants</h1>
 <section>
     <?php foreach ($students as $student) {
