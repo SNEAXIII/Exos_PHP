@@ -2,15 +2,13 @@
 // Creer une session
 // ATTENTION: en 1er seulement
 session_start();
-$_SESSION["prenom"] => "Alexis";
-$_SESSION["nom"] => "Bassigonot";
-$_SESSION["p1"] => "Produit 1";
-$_SESSION["p2"] => "Produit 2";
-$_SESSION["mageur"]=> true;
-$_SESSION["utilisateur"] => "utilisateur";
-$_SESSION["panier"] => [];
-
-
+$_SESSION["prenom"] = "Alexis";
+$_SESSION["nom"] = "Bassigonot";
+$_SESSION["p1"] = "Produit 1";
+$_SESSION["p2"] = "Produit 2";
+$_SESSION["majeur"]= true;
+$_SESSION["utilisateur"] = "utilisateur";
+$_SESSION["panier"] = [];
 ?>
 <!doctype html>
 <html lang="fr">
