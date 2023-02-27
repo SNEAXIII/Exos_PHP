@@ -91,18 +91,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="main.css">
     <title>Formulaire</title>
 </head>
 <body>
 <screen>
-<header>
-    <img id="logo" src="logo-BS.png" alt="logo">
-    <nav>
-        <a href="index.php" class="itemNonActuel item">Accueil</a>
-        <a href="ajoutEtudiant.php" class="itemActuel item">nouvel étudiant</a>
-        <a href="contact.php" class="itemNonActuel item">Contact</a>
-    </nav>
-</header>
+    <?php include_once "header.php"?>
 <div class="container">
     <form action="" method="post" enctype="multipart/form-data">
 
@@ -136,6 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php if (isset($erreurs["email"])) {
             echo "<p class='erreur-validation'>".$erreurs["email"]."</p>";}?>
 
+        <label for=photo>Image* (600ko max)</label>
         <input type="file" id="photo" name="photo">
         <?php if (isset($erreurs["photo"])) {
             echo "<p class='erreur-validation'>".$erreurs["photo"]."</p>";}?>

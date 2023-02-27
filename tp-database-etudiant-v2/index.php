@@ -11,12 +11,13 @@ $students = selectAllStudent();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
     <title>Best Students</title>
 </head>
 <body>
 <screen>
 <?php include_once "header.php"?>
-<h1 style="border-bottom: solid 1px black">Voici la liste de nos étudiants</h1>
+<h1>Liste de nos étudiants</h1>
 <section>
     <?php foreach ($students as $student) {
         $photo = $student["photo_etudiant"];
