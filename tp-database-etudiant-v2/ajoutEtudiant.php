@@ -68,7 +68,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($erreurs)) {
 //        -->Inserer dans la bdd
         $connection = createConnection();
-        $requeteSQL = "INSERT INTO etudiant (prenom_etudiant, nom_etudiant, date_naissance_etudiant, adresse_etudiant, photo_etudiant) VALUES (:prenom, :nom, :dateNaissance, :adresse, :photo);";
+        $requeteSQL =
+            "
+            INSERT INTO etudiant (prenom_etudiant, nom_etudiant, date_naissance_etudiant, adresse_etudiant, photo_etudiant) 
+            VALUES (:prenom, :nom, :dateNaissance, :adresse, :photo);
+            ";
         $requete=$connection->prepare($requeteSQL);
         $requete->bindValue(":prenom", $prenom);
         $requete->bindValue(":nom", $nom);

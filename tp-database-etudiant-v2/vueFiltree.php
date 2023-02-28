@@ -1,7 +1,7 @@
 <?php
 include_once 'src\modele\etudiantDB.php';
 include_once 'src\utils\dates.php';
-$students = selectStudentsByPromotion("SIO_2");
+$students = selectStudentsByPromotion("SIO_1");
 ?>
 <!doctype html>
 <html lang=fr>
