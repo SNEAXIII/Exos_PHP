@@ -19,6 +19,7 @@ if (!empty($_SESSION["prenom"])) {
 <h1>Utiliser une variable</h1>
 <p>Ce script permet de creer une nouvelle session</p>
 <a href="creerSession.php">HEHE</a>
+<a href="index.php">index</a>
 <p><?= isset($prenom)?"Bonjour $prenom":"Vous n'avez pas saisis de prénom" ?></p>
 </body>
 </html>

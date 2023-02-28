@@ -63,7 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <form action="" method="post" enctype="multipart/form-data">
-
             <label for="rue">Rue*</label>
             <input type="text" id="rue" name="rue" value="<?= $rue?>">
             <?php if (isset($erreurs["rue"])) {
