@@ -24,6 +24,14 @@ function selectStudentById(int $id):array {
     $requete->execute();
     return $requete->fetch(PDO::FETCH_ASSOC);
 }
+function selectPromotionById(int $id) :array | null {
+    $connection = createConnection();
+    $requeteSQL = "SELECT intitule_promotion FROM promotion WHERE id_promotion = :id;";
+    $requete=$connection->prepare($requeteSQL);
+    $requete->bindValue(":id", $id);
+    $requete->execute();
+    return $requete->fetch(PDO::FETCH_ASSOC);
+}
 function selectStudentsByPromotion(string $promotion) : array {
     $connection = createConnection();
     $requeteSQL =

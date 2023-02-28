@@ -1,5 +1,9 @@
 <?php
 include_once 'src\modele\connexionBD.php';
+include_once 'src\modele\etudiantDB.php';
+
+$listePromotions = selectAllPromotion();
+
 //--> Faire une variable pour chaque champs (pas de liste)
 $prenom = null;
 $nom = null;
@@ -45,6 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else
     {$dateNaissance = trim($_POST["date-naissance"]);}
 
+    if (array_key_exists(trim($_POST["niveau-etude"]),$listePromotions)) {
+        $formation = trim($_POST["niveau-etude"]);
+    } else {
+        $formation = "";
+    }
     if (empty($_FILES["photo"]["name"]))
     {$erreurs["photo"] = "La photo est obligatoire";}
     else
@@ -68,10 +77,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($erreurs)) {
 //        -->Inserer dans la bdd
         $connection = createConnection();
+        $champFormation = !empty($formation)?", id_promotion":"";
+        $valueFormation = !empty($formation)?", :id_promotion":"";
         $requeteSQL =
             "
-            INSERT INTO etudiant (prenom_etudiant, nom_etudiant, date_naissance_etudiant, adresse_etudiant, photo_etudiant) 
-            VALUES (:prenom, :nom, :dateNaissance, :adresse, :photo);
+            INSERT INTO etudiant (prenom_etudiant, nom_etudiant, date_naissance_etudiant, adresse_etudiant, photo_etudiant$champFormation) 
+            VALUES (:prenom, :nom, :dateNaissance, :adresse, :photo$valueFormation);
             ";
         $requete=$connection->prepare($requeteSQL);
         $requete->bindValue(":prenom", $prenom);
@@ -79,10 +90,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $requete->bindValue(":dateNaissance", $dateNaissance);
         $requete->bindValue(":adresse", $adresse);
         $requete->bindValue(":photo", $nomFichierRandomise);
+        if (!empty($formation)) {
+            $requete->bindValue(":id_promotion", $formation);
+        }
         $requete->execute();
 //        -->Faire la redirection
         header("location: ../index.php");
-//        echo $prenom , $nom, $dateNaissance, $adresse, $nomFichierRandomise;
     }
 }
 ?>
@@ -138,6 +151,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="file" id="photo" name="photo">
         <?php if (isset($erreurs["photo"])) {
             echo "<p class='erreur-validation'>".$erreurs["photo"]."</p>";}?>
+
+        <label for="niveau-etude">Niveau d'étude</label>
+        <select name="niveau-etude" id="niveau-etude">
+            <option value="">Non renseigné</option>
+            <?php
+            foreach ($listePromotions as $id => $promotion) {
+                $nom = $promotion["intitule_promotion"];
+            ?>
+            <option value="<?=$id?>"><?=$nom?></option>
+            <?php
+            }
+            ?>
+        </select>
         <p>* : Champs obligatoires</p>
         <input type="submit" value="Envoyer">
     </form>

@@ -16,7 +16,7 @@ form {
 form > label {
     font-weight: bold;
 }
-form > input {
+form > input, form > select {
     display: block;
     width: 100%;
     padding: 12px;

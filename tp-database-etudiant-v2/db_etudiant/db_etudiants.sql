@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 28 fév. 2023 à 10:00
--- Version du serveur : 10.4.24-MariaDB
--- Version de PHP : 8.1.6
+-- Généré le : mar. 28 fév. 2023 à 23:22
+-- Version du serveur : 10.4.25-MariaDB
+-- Version de PHP : 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,16 +44,13 @@ CREATE TABLE `etudiant` (
 --
 
 INSERT INTO `etudiant` (`id_etudiant`, `prenom_etudiant`, `nom_etudiant`, `email_etudiant`, `date_naissance_etudiant`, `adresse_etudiant`, `tel_etudiant`, `photo_etudiant`, `id_promotion`) VALUES
-(6, 'Python', 'Man', 'misterbalise2@gmail.com', '2004-07-05', '13 rue de la saucisse', '+33641528820', '63f5538f7bdc5.jpg', 1),
-(9, 'Esteban', 'Racine', 'esteban.racineecole@gmail.com', '2004-01-08', '13 rue de la merguez', '+33333333333', '63f5538f7bdc5.jpg', 2),
-(10, 'Odin', 'Viennet', 'odin.viennet@pm.me', '2006-05-17', '15 rue des chipolata', '+33333333333', '63f5538f7bdc5.jpg', 1),
-(15, 'nadine', 'saucisse', '', '2000-05-06', '16 rue de la saucisse', '', '63f5dbf4c6fa0.jpg', 2),
-(16, 'nadine', 'saucisse', '', '2000-05-06', '16 rue de la saucisse', '', '63f5dc1d2bdbb.jpg', 2),
-(17, 'nadine', 'saucisse', '', '2000-05-06', '16 rue de la saucisse', '', '63f5dd239acc4.jpg', 1),
-(18, 'nadine', 'saucisse', '', '2004-06-16', '16 rue de la saucisse', '', '63f606256f34a.jpg', NULL),
-(19, 'nadine', 'saucisse', '', '2023-02-11', '16 rue de la saucisse', '', '63f606908e43f.jpg', NULL),
-(20, 'nadine', 'saucisse', '', '1997-06-04', '16 rue de la saucisse', '', '63f60a8e742fe.jpg', NULL),
-(21, 'nadine', 'dupont', '', '2000-02-23', '16 rue de la route', '', '63f6402f75d3a.jpg', NULL);
+(6, 'Python', 'Man', 'misterbalise2@gmail.com', '2004-07-05', '13 rue de la surprise', '+33641528820', '63f5538f7bdc5.jpg', 1),
+(9, 'Esteban', 'Racine', 'esteban.racineecole@gmail.com', '2004-01-08', '13 rue de la surprise', '+33333333333', '63f5538f7bdc5.jpg', 2),
+(10, 'Odin', 'Viennet', 'odin.viennet@pm.me', '2006-05-17', '13 rue de la surprise', '+33333333333', '63f5538f7bdc5.jpg', 1),
+(21, 'nadine', 'dupont', '', '2000-02-23', '13 rue de la surprise', '', '63f6402f75d3a.jpg', NULL),
+(22, 'cest', 'moi', '', '2016-06-09', '13 rue de la surprise', '', '63fe7213501ba.jpg', 1),
+(23, 'cest', 'moi', '', '2023-02-10', 'je test', '', '63fe7356aa24a.jpg', NULL),
+(24, 'cest', 'moi', '', '1995-02-16', 'je test', '', '63fe754dd9181.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -82,7 +79,8 @@ INSERT INTO `promotion` (`id_promotion`, `intitule_promotion`) VALUES
 -- Index pour la table `etudiant`
 --
 ALTER TABLE `etudiant`
-  ADD PRIMARY KEY (`id_etudiant`);
+  ADD PRIMARY KEY (`id_etudiant`),
+  ADD KEY `FK_etudiant` (`id_promotion`);
 
 --
 -- Index pour la table `promotion`
@@ -98,13 +96,23 @@ ALTER TABLE `promotion`
 -- AUTO_INCREMENT pour la table `etudiant`
 --
 ALTER TABLE `etudiant`
-  MODIFY `id_etudiant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_etudiant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT pour la table `promotion`
 --
 ALTER TABLE `promotion`
   MODIFY `id_promotion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `etudiant`
+--
+ALTER TABLE `etudiant`
+  ADD CONSTRAINT `FK_etudiant` FOREIGN KEY (`id_promotion`) REFERENCES `promotion` (`id_promotion`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
