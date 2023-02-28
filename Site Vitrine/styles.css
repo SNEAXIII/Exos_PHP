@@ -66,7 +66,7 @@ section {
     grid-gap: 2rem;
     grid-template-areas:
         ". titre1 ."
-        "presentation presentation fondateur"
+        "presentation presentation presentation"
         ". titre2 ."
         "imageIllustration1 imageIllustration1 legende1"
         "legende2 imageIllustration2 imageIllustration2"
