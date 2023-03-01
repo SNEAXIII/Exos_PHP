@@ -17,7 +17,6 @@
             ". . . . . . . ."
             ". a b c d e f .";
 }
-
 main#carousel {
     grid-row: 1 / 2;
     grid-column: 1 / 8;

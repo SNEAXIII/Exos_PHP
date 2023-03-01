@@ -1,7 +1,10 @@
 <?php
 include_once 'src\modele\etudiantDB.php';
 include_once 'src\utils\dates.php';
-$students = selectStudentsByPromotion("SIO_1");
+//$students = selectStudentsByPromotion("SIO_1");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $students = isset($_POST["niveau-etude"])?selectStudentsByPromotion(trim($_POST["niveau-etude"])):false;
+}
 ?>
 <!doctype html>
 <html lang=fr>
@@ -20,8 +23,10 @@ $students = selectStudentsByPromotion("SIO_1");
     <?php include_once "src/partial/header.php" ?>
     <form class="mini_formluaire" action="" method="post">
         <select class="select_formation" name="niveau-etude" id="niveau-etude">
+            <option selected disabled hidden>Veuillez choisir une formation</option>
             <?php
-            foreach (selectAllPromotion() as $id => $promotion) {
+            foreach (selectAllPromotion() as $promotion) {
+                $id = $promotion["id_promotion"];
                 $nom = $promotion["intitule_promotion"];
                 ?>
                 <option value="<?=$id?>"><?=$nom?></option>
@@ -30,7 +35,7 @@ $students = selectStudentsByPromotion("SIO_1");
             ?>
             <input class="select_formation" type="submit" value="Afficher">
     </form>
-    <?php include_once "src/partial/afficheListeEtudiant.php" ?>
+    <?php if ($students)include_once "src/partial/afficheListeEtudiant.php" ?>
 </screen>
 </body>
 </html>

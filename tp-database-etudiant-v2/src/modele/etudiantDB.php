@@ -39,7 +39,7 @@ function selectStudentsByPromotion(string $promotion) : array {
     SELECT * 
     FROM etudiant as e
     INNER JOIN promotion p on e.id_promotion = p.id_promotion
-    WHERE intitule_promotion = :promotion
+    WHERE p.id_promotion = :promotion
     ";
     $requete=$connection->prepare($requeteSQL);
     $requete->bindValue(":promotion", $promotion);

@@ -32,7 +32,9 @@ form > input[type=submit] {
     border: none;
     border-radius: 5px;
     cursor:pointer;
-    
+}
+p {
+    margin: 10px;
 }
 .erreur-validation {
     color: red;
