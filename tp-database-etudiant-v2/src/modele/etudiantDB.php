@@ -11,7 +11,7 @@ function selectAllStudent():array {
 }
 function selectAllPromotion():array {
     $connection = createConnection();
-    $requeteSQL = "SELECT intitule_promotion FROM promotion";
+    $requeteSQL = "SELECT * FROM promotion";
     $requete=$connection->prepare($requeteSQL);
     $requete->execute();
     return $requete->fetchAll(PDO::FETCH_ASSOC);

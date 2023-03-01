@@ -1,5 +1,2 @@
-pas de voici
-eviter les souliger
+text area mais pas input text
 privilegier une seul font
-penser a faire un include pour nav et footer
-avertir l'utilisateur de la taille a l'avance

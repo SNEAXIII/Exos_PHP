@@ -24,7 +24,7 @@ $promotion = isset($id_promotion)?"Élève de ".selectPromotionById($id_promotio
 </head>
 <body>
 <screen>
-    <?php include_once "header.php" ?>
+    <?php include_once "src/partial/header.php" ?>
     <h1>Détails sur l'étudiant</h1>
     <cadre>
         <img id="photo" src="db_images/<?= $student["photo_etudiant"]?>" alt="image représentant l'étudiant">
