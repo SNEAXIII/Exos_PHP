@@ -7,18 +7,21 @@ h1 {
 }
 section {
     margin: 15px;
-    /*border: orange solid 1px;*/
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
 }
+.boxArticle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 article {
     background-color: #bebebe;
     width: 100%;
-    /*height: 420px;*/
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: unset;
+    grid-auto-rows: min-content;
     border: solid 1px black;
     align-items: center;
     grid-template-areas:
@@ -59,7 +62,7 @@ article {
     align-self: center;
     border: black 1px solid;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin: 10px;
     background-color: #197979;
     transition: background-color 300ms;
 }

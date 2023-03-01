@@ -39,3 +39,11 @@ form > input[type=submit] {
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
+.mini_formluaire {
+    display: flex;
+    justify-content: center;
+}
+.select_formation {
+    padding: 10px 20px;
+    margin: 10px;
+}

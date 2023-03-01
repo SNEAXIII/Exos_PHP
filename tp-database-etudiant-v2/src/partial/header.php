@@ -7,7 +7,7 @@ $listeFichiers = [
 ]
 ?>
 <header>
-    <img id="logo" src="logo-BS.png" alt="logo">
+    <img id="logo" src="src/img/logo-BS.png" alt="logo">
     <nav>
 <?php
 foreach ($listeFichiers as $nomFichier => $label) {
