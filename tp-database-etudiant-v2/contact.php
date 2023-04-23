@@ -1,3 +1,4 @@
+<?php include_once "src/utils/dates.php" ?>
 <!doctype html>
 <html lang=fr>
 <head>
@@ -12,6 +13,7 @@
 <body>
 <screen>
     <?php include_once "src/partial/header.php" ?>
+    <?php var_dump(siOuvert())?>
 </screen>
 </body>
 </html>

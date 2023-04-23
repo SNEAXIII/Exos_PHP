@@ -63,13 +63,14 @@ nav {
 .item
 {
     cursor: pointer ;
-    font-size: 18px;
+    font-size: 35px;
     text-align: center;
     flex:1;
     max-width: 250px;
     margin: 4px 10px ;
-    font-family: "heroes_legend", serif;
+    font-family: "Roboto", serif;
     transition: color 300ms;
+    font-weight: bold;
 }
 .item:hover
 {
