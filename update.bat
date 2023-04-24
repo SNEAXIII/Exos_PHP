@@ -2,6 +2,7 @@
 echo Ajout des fichiers...
 echo __________________________
 git add -A
+echo __________________________
 echo Commit en cours... %date% %time%
 echo __________________________
 git commit -m "%date% %time%"
