@@ -2,6 +2,7 @@
 include_once 'src\modele\etudiantDB.php';
 include_once 'src\utils\dates.php';
 //$students = selectStudentsByPromotion("SIO_1");
+$students=[];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $students = isset($_POST["niveau-etude"])?selectStudentsByPromotion(trim($_POST["niveau-etude"])):false;
 }

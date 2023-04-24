@@ -46,3 +46,14 @@ function selectStudentsByPromotion(string $promotion) : array {
     $requete->execute();
     return $requete->fetchAll(PDO::FETCH_ASSOC);
 }
+function recupereHorraire() : array {
+    $connection = createConnection();
+    $requeteSQL =
+        "
+    SELECT * 
+    FROM horraire
+    ";
+    $requete=$connection->prepare($requeteSQL);
+    $requete->execute();
+    return $requete->fetchAll(PDO::FETCH_ASSOC);
+}
