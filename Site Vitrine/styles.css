@@ -30,21 +30,27 @@ body {
     /*border: solid 3px red;*/
 }
 header {
+    background-color: #e8e8e8;
     width: 100%;
     border: black 1px solid;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1rem;
 }
 #logo {
     padding: 0.5rem;
     height: 100%;
     max-width: 15rem;
 }
-nav ul{
+ul {
     display: flex;
     height: 100%;
     list-style: none;
+}
+nav ul{
     flex-wrap: wrap ;
     align-items: center;
     justify-content: center;
@@ -58,6 +64,21 @@ nav ul li {
     padding: 1rem 0;
     cursor: pointer;
 }
+nav ul li ul {
+    width: 35rem;
+}
+#recherche {
+    border-width: .1rem;
+    padding-left: 0.2rem;
+}
+input[type=submit]{
+    background-image: url('src/svg/search.svg');
+    background-repeat: no-repeat;
+    width: 3rem;
+    height: 3rem;
+    border-color: #e8e8e8;
+}
+
 section {
     padding: 1rem 0;
     display: grid;

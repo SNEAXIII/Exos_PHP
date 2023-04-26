@@ -7,12 +7,12 @@
 // Créer un objet DateTime avec la date du 22/06/2019 à 9h15
 $date = new DateTime('2019-06-22 09:15');
 // Ajouter 1 mois à la date avec la méthode modify
-$date->modify("+1day");
+$date->modify("+1 month");
 // Afficher la date au format jj/mm/aaaa hh:mm
 echo $date->format('d/m/Y H:i');
 echo PHP_EOL;
 // Ajouter 2 ans 3 mois et 1 jour à la date avec la méthode modify
-$date->modify("+2year3month1day");
+$date->modify("+2 years +3 months +1 day");
 // Afficher la date au format jj/mm/aaaa hh:mm
 echo $date->format('d/m/Y H:i');
 echo PHP_EOL;

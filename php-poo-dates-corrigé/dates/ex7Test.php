@@ -15,7 +15,7 @@ $date->setTimezone(new DateTimeZone('America/New_York'));
 echo $date->format('d/m/Y H:i');
 echo PHP_EOL;
 // Créer un objet DateTime avec la date du jour et l'heure courante et le fuseau horaire de New York
-$date= new DateTime("now",new DateTimeZone("America/New_York"));
+$date = new DateTime('now', new DateTimeZone('America/New_York'));
 // Afficher la date du jour au format jj/mm/aaaa hh:mm
 echo $date->format('d/m/Y H:i');
 echo PHP_EOL;

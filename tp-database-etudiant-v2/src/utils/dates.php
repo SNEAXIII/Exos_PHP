@@ -44,15 +44,15 @@ function siOuvert():bool
     foreach ($horraires as $jour) {
         if(isset($jour['heure_matin_debut'])){
             $minutesDebut = intval(substr($jour['heure_matin_debut'], 0, 2)) * 60 + intval(substr($jour['heure_matin_debut'], 3, 2));
-            $minutesFin = intval(substr($jour['heure_matin_debut'], 0, 2)) * 60 + intval(substr($jour['heure_matin_debut'], 3, 2));
+            $minutesFin = intval(substr($jour['heure_matin_fin'], 0, 2)) * 60 + intval(substr($jour['heure_matin_fin'], 3, 2));
             if ($minutesDebut <= $minutesCourante && $minutesCourante <= $minutesFin)
             {
               return true;
             };
         }
         if (isset($jour['heure_aprem_debut'])) {
-            $minutesDebut = intval(substr($jour['heure_matin_debut'], 0, 2)) * 60 + intval(substr($jour['heure_matin_debut'], 3, 2));
-            $minutesFin = intval(substr($jour['heure_matin_debut'], 0, 2)) * 60 + intval(substr($jour['heure_matin_debut'], 3, 2));
+            $minutesDebut = intval(substr($jour['heure_aprem_debut'], 0, 2)) * 60 + intval(substr($jour['heure_aprem_debut'], 3, 2));
+            $minutesFin = intval(substr($jour['heure_aprem_fin'], 0, 2)) * 60 + intval(substr($jour['heure_aprem_fin'], 3, 2));
             if ($minutesDebut <= $minutesCourante && $minutesCourante <= $minutesFin)
             {
                 return true;
