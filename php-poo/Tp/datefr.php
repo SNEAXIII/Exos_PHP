@@ -4,7 +4,8 @@ class DateFr {
 
     public function __construct(string $date)
     {
-        $this->date = DateTime::createFromFormat("d/m/Y h:i","$date 00:00");
+        $this->date = DateTime::createFromFormat("d/m/Y",$date);
+        $this->date->setTime(0,0);
     }
     public function format() : string
     {
