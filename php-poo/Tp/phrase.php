@@ -4,5 +4,5 @@ class Phrase {
     public function __construct(string $phrase) {
         $this->phrase = $phrase;
     }
-    function 
+    function
 }
