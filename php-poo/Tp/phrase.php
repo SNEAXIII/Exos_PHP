@@ -1,30 +1,29 @@
 <?php
 class Phrase {
     private string $phrase;
-    private array $signePonctuation;
+    private array $signePonctuationFaible;
     private array $alphabet;
+    private string $caracteresAccentues;
 
     public function __construct(string $phrase) {
         $this->phrase = $phrase;
-        $this->signePonctuation = [",",";",":","(",")","\"","[","]","|"];
+        $this->signePonctuationFaible = [",",";",":","(",")","\"","[","]","|"];
         $this->alphabet = array_merge(range("a","z"),["'","-"],range(0,9));
+        $this->caracteresAccentues = "áàâäãåçéèêëíìîïñóòôöõúùûüýÿ";
     }
     public function toString() : string
     {
         return $this->phrase;
     }
-    public function calculerNombreMot() : int
+    public function calculerNombreMots() : int
     {
         $nombre_mot = 0;
         $ancienCaractere = " ";
-        $phraseSansPonctuationFaible = str_replace($this->signePonctuation," ",$this->phrase);
-        $phraseLowSansPonctuationFaible = strtolower($phraseSansPonctuationFaible);
-        echo $phraseLowSansPonctuationFaible;
-        $phraseEdulcoree = strtr($phraseLowSansPonctuationFaible, 'áàâäãåçéèêëíìîïñóòôöõúùûüýÿ', 'aaaaaaceeeeiiiinooooouuuuyy');;
-        echo $phraseEdulcoree;
+        $phraseEdulcoree = strtolower($this->phrase);
         foreach (str_split($phraseEdulcoree) as $caractere)
         {
-            if (in_array($caractere,$this->alphabet) && $ancienCaractere == " ") {
+            if ((in_array($caractere,$this->alphabet) || strpos($caractere,$this->caracteresAccentues)) &&
+                ($ancienCaractere == " " || in_array($ancienCaractere,$this->signePonctuationFaible))) {
                 $nombre_mot++;
             }
             $ancienCaractere = $caractere;
@@ -34,5 +33,4 @@ class Phrase {
 }
 
 $phrase = new Phrase("Hier, il a été à la plage.");
-echo $phrase->calculerNombreMot();
-//echo str_word_count("t.t.t");
+echo $phrase->calculerNombreMots();
