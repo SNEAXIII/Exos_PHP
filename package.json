@@ -1,0 +1,20 @@
+{
+  "name": "exos_php",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SNEAXIII/Exos_PHP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SNEAXIII/Exos_PHP/issues"
+  },
+  "homepage": "https://github.com/SNEAXIII/Exos_PHP#readme"
+}
