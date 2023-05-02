@@ -9,29 +9,10 @@
     <title>Page vitrine</title>
 </head>
 <body>
-<header>
-    <img id="logo" alt="" src="src/image/logo_wide.png">
-    <nav>
-        <ul>
-            <li>nos produits</li>
-            <li>nos services</li>
-            <li>à propos</li>
-            <li>nous contacter</li>
-            <li>
-                <ul>
-                    <li>Inscription</li>
-                    <li>connexion</li>
-                    <li>
-                        <input id="recherche" type="text" placeholder="Recherche">
-                        <input src="src/" type="submit" value=" ">
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</header>
+<?php require_once "src/utils/header.php"?>
 <section>
     <h1 style="grid-area: titre1">Présentation</h1>
+    <img id="img_illus" style="grid-area: imgillus1" class="imgillus" src="src/image/chantier_1.jpg" alt="chantier">
     <p class="presentation" style="grid-area: presentation">
         ÆRIS BTP est présente sur le secteur depuis 1984 afin de vous aider à concevoir votre projet, de l'idée
         jusqu'à la réalisation finale. Nous intégrons une démarche éco-responsable à notre processus dans le but

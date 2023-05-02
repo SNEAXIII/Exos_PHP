@@ -63,6 +63,10 @@ nav ul li {
     text-transform: uppercase;
     padding: 1rem 0;
     cursor: pointer;
+    transition: color 300ms;
+}
+#nav > li:hover {
+    color: #645e5e;
 }
 nav ul li ul {
     width: 35rem;
@@ -87,11 +91,15 @@ section {
     grid-gap: 2rem;
     grid-template-areas:
         ". titre1 ."
-        "presentation presentation presentation"
+        "imgillus1 presentation presentation"
         ". titre2 ."
         "imageIllustration1 imageIllustration1 legende1"
         "legende2 imageIllustration2 imageIllustration2"
         ;
+}
+#img_illus {
+    width: 640px;
+    aspect-ratio: auto 640 / 640;
 }
 
 section h1 {
