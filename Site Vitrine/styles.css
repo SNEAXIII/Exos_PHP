@@ -45,16 +45,15 @@ header {
     height: 100%;
     max-width: 15rem;
 }
-ul {
-    display: flex;
-    height: 100%;
-    list-style: none;
-}
+
 nav ul{
     flex-wrap: wrap ;
     align-items: center;
     justify-content: center;
     margin: 0 0.5rem;
+    display: flex;
+    height: 100%;
+    list-style: none;
 }
 nav ul li {
     display: block;
@@ -68,7 +67,7 @@ nav ul li {
 #nav > li:hover {
     color: #645e5e;
 }
-nav ul li ul {
+nav ul ul {
     width: 35rem;
 }
 #recherche {
@@ -81,47 +80,4 @@ input[type=submit]{
     width: 3rem;
     height: 3rem;
     border-color: #e8e8e8;
-}
-
-section {
-    padding: 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    width: 100%;
-    grid-gap: 2rem;
-    grid-template-areas:
-        ". titre1 ."
-        "imgillus1 presentation presentation"
-        ". titre2 ."
-        "imageIllustration1 imageIllustration1 legende1"
-        "legende2 imageIllustration2 imageIllustration2"
-        ;
-}
-#img_illus {
-    width: 640px;
-    aspect-ratio: auto 640 / 640;
-}
-
-section h1 {
-    text-align: center;
-}
-.presentation {
-    font-size: 2rem;
-    text-align: justify;
-}
-.fondateur {
-
-}
-.imageIllustration {
-    width: 100%;
-    border-radius: 1.5rem;
-    border: solid 1px black;
-}
-.legende {
-    font-size: 2.5rem;
-    align-self: center;
-    justify-self: center;
-    text-align: center;
-    border-bottom: solid 1px black;
-    padding: 0.3rem;
 }
