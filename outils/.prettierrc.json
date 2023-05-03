@@ -1,0 +1,7 @@
+{
+  "phpVersion": 8.1,
+  "tabWidth": 4,
+  "max_line_length": 100,
+  "singleQuote": true,
+  "indent_size": 2
+}
