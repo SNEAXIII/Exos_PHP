@@ -10,14 +10,22 @@ card {
     display: grid;
     align-items: center;
     justify-items: center;
-    border-radius: 1px;
-    grid-template-rows: 17rem 5rem 12rem;
+    border-radius: 15px 0;
+    background-color: #d2d1d1;
+    box-shadow: 5px 5px 15px #464646;
+    padding: 10px;
+    grid-template-rows: 17rem 6rem 12rem;
     grid-template-columns: 27rem;
+    transition: all 300ms;
     grid-template-areas:
         "image"
         "titre"
         "description"
 ;
+}
+card:hover {
+    transform: translate(10px,10px);
+    box-shadow: 1px 1px 5px;
 }
 card img
 {

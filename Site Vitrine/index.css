@@ -1,20 +1,19 @@
-section
-{
+section {
     padding: 1rem 0;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     grid-gap: 2rem;
     grid-template-areas:
         ". expertise ."
         "competence competence competence"
         ". titre1 ."
-        "presentation presentation presentation"
+        "presentation presentation presentationImage"
         ". titre2 ."
         "imageIllustration1 imageIllustration1 legende1"
-        "legende2 imageIllustration2 imageIllustration2"
-;
+        "legende2 imageIllustration2 imageIllustration2";
 }
+
 #img_illus {
     width: 640px;
     aspect-ratio: auto 640 / 640;
@@ -23,18 +22,28 @@ section
 section h1 {
     text-align: center;
 }
+
 .presentation {
     font-size: 2rem;
     text-align: justify;
 }
+
+.image_presentation {
+    width: auto;
+    height: 400px;
+    background: linear-gradient(to left, rgba(232, 232, 232, 0) 90%, rgba(232, 232, 232, 1) 100%), url(src/image/chantier_1.jpg);
+}
+
 .fondateur {
 
 }
+
 .imageIllustration {
     width: 100%;
     border-radius: 1.5rem;
     border: solid 1px black;
 }
+
 .legende {
     font-size: 2.5rem;
     align-self: center;
@@ -43,8 +52,8 @@ section h1 {
     border-bottom: solid 1px black;
     padding: 0.3rem;
 }
-cards
-{
+
+cards {
     display: flex;
     justify-content: space-evenly;
 }

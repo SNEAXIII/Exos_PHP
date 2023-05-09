@@ -11,29 +11,38 @@
     <title>Page vitrine</title>
 </head>
 <body>
-<?php require_once "src/utils/header.php"?>
+
+<?php require_once "src/utils/header.php" ?>
 <section>
     <h1 style="grid-area: expertise">Nos domaines d'expertises</h1>
     <cards style="grid-area: competence">
         <card>
             <img style="grid-area : image" src="src/image/route.jfif" alt="">
             <div style="grid-area : titre" class="titre">Route</div>
-            <div style="grid-area : description" class="description">Nous sommes capable de réaliser des routes communales, des routes départementales et des routes nationales.</div>
+            <div style="grid-area : description" class="description">Nous sommes capable de réaliser des routes
+                communales, des routes départementales et des routes nationales.
+            </div>
         </card>
         <card>
             <img style="grid-area : image" src="src/image/maison_individuelle.jpg" alt="">
             <div style="grid-area : titre" class="titre">Maison individuelle</div>
-            <div style="grid-area : description" class="description">Nous sommes en mesure de nous adapter à tous types de terrains afin de mener</div>
+            <div style="grid-area : description" class="description">Nous sommes en mesure de nous adapter à tous types
+                de terrains afin de mener à bien tous types de projet de maison individuelle.
+            </div>
         </card>
         <card>
-            <img style="grid-area : image" src="src/image/route.jfif" alt="">
-            <div style="grid-area : titre" class="titre">Route</div>
-            <div style="grid-area : description" class="description">Nous sommes capable de réaliser des routes communales, des routes départementales et des routes nationales.</div>
+            <img style="grid-area : image" src="src/image/batimentLocatif.jpg" alt="">
+            <div style="grid-area : titre" class="titre">Immeuble locatif</div>
+            <div style="grid-area : description" class="description">Nous sommes expérimenté de dans l'élaboration de
+                batiments complexes tels que les immeubles locatif.
+            </div>
         </card>
         <card>
-            <img style="grid-area : image" src="src/image/route.jfif" alt="">
-            <div style="grid-area : titre" class="titre">Route</div>
-            <div style="grid-area : description" class="description">Nous sommes capable de réaliser des routes communales, des routes départementales et des routes nationales.</div>
+            <img style="grid-area : image" src="src/image/marieAbuild.jpg" alt="">
+            <div style="grid-area : titre" class="titre">Mairie</div>
+            <div style="grid-area : description" class="description">Nous sommes compétent dans la conception écologique
+                et efficiente d'une mairie moderne.
+            </div>
         </card>
     </cards>
     <h1 style="grid-area: titre1">Présentation</h1>
@@ -42,6 +51,8 @@
         jusqu'à la réalisation finale. Nous intégrons une démarche éco-responsable à notre processus dans le but
         d'optimiser les éclairages et le chauffage afin de réduire la consomation électrique. Vous trouverez ci-dessous
         quelques réalisations.</p>
+<!--    <img class="image_presentation image" style="grid-area: presentationImage" src="src/image/chantier_1.jpg" alt="chatier">-->
+    <div class="image_presentation" style="grid-area: presentationImage"></div>
     <h1 style="grid-area: titre2">Nos réalisations</h1>
     <img class="imageIllustration" style="grid-area: imageIllustration1" src="bulk_bank_image/realisation2.jpg" alt="">
     <span class="legende" style="grid-area: legende1">Nouvelle mairie de Meilleraie-Tillay<br>2018</span>
