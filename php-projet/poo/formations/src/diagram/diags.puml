@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Formation {
+    -intitule : chaine
+    -nombre_place : entier
+    -date_debut : datetime
+    -date_fin : datetime
+}
+
+class Salarie {
+    -nom : chaine
+    -prenom : chaine
+}
+
+class Entreprise {
+    -nom : chaine
+    -rue : chaine
+    -code_postal : chaine
+    -ville : chaine
+}
+
+class Inscription {
+    -note : entier
+    -appreciation : texte
+    + inscrireSalarie (salarie : Salarie)
+    + noterSalarie (salarie : Salarie, note :
+    entier, appreciation : text)
+}
+
+Formation "1..1" --> "0..*" Inscription : remplis >
+Inscription "0..*" --> "1..1" Salarie : inscrit >
+Salarie "0..*" --> "1..1" Entreprise : travaille >
+
+@enduml
