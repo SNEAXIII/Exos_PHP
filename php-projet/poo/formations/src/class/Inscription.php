@@ -37,8 +37,8 @@ class Inscription
         return $this -> appreciation;
     }
 
-    public function inscrireSalarie(Salarie $salarie): void {
-        
-    }
+    public function inscrireSalarie(Salarie $salarie): void
+    {
 
+    }
 }
