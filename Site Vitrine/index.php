@@ -20,7 +20,7 @@
             <img style="grid-area : image" src="src/image/route.jfif" alt="">
             <div style="grid-area : titre" class="titre">Route</div>
             <div style="grid-area : description" class="description">Nous sommes capable de réaliser des routes
-                communales, des routes départementales et des routes nationales.
+                communales, des routes départementales, des routes nationales et des autoroutes.
             </div>
         </card>
         <card>
