@@ -47,12 +47,17 @@
     </cards>
     <h1 style="grid-area: titre1">Présentation</h1>
     <p class="presentation" style="grid-area: presentation">
-        ÆRIS BTP est présente sur le secteur depuis 1984 afin de vous aider à concevoir votre projet, de l'idée
-        jusqu'à la réalisation finale. Nous intégrons une démarche éco-responsable à notre processus dans le but
-        d'optimiser les éclairages et le chauffage afin de réduire la consomation électrique. Vous trouverez ci-dessous
-        quelques réalisations.</p>
-<!--    <img class="image_presentation image" style="grid-area: presentationImage" src="src/image/chantier_1.jpg" alt="chatier">-->
-    <div class="image_presentation" style="grid-area: presentationImage"></div>
+        ÆRIS BTP est présente sur le secteur depuis 1984 afin de vous aider pour concevoir votre projet.
+        Jusqu'à la réalisation finale, nous intégrons une démarche écoresponsable à notre processus dans le but
+        d'optimiser les éclairages et le chauffage afin de réduire la consommation électrique. Nous réalisons des routes
+        pour les collectivités, des maisons individuelles pour les particuliers avec des multiples services comme faire
+        la terrasse ou l'expertise du sol, des mairies pour les municipalités ou des immeubles locatifs. Vous trouverez
+        ci-dessous quelques une de nos réalisations.
+    </p>
+    <!--    <img class="image_presentation image" style="grid-area: presentationImage" src="src/image/chantier_1.jpg" alt="chatier">-->
+    <div class="image_presentation" style="grid-area: presentationImage">
+        <img src="src/image/chantier_2.jpg" alt="chantier en cours">
+    </div>
     <h1 style="grid-area: titre2">Nos réalisations</h1>
     <img class="imageIllustration" style="grid-area: imageIllustration1" src="bulk_bank_image/realisation2.jpg" alt="">
     <span class="legende" style="grid-area: legende1">Nouvelle mairie de Meilleraie-Tillay<br>2018</span>

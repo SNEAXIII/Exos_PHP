@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 16 mai 2023 à 15:26
+-- Généré le : mer. 17 mai 2023 à 14:03
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 8.1.6
 
@@ -38,7 +38,9 @@ CREATE TABLE `contenu` (
 --
 
 INSERT INTO `contenu` (`id_devis`, `id_service`, `prix`) VALUES
-(1, 1, 5000);
+(1, 1, 5000),
+(1, 2, 3000),
+(1, 4, 10000);
 
 -- --------------------------------------------------------
 
@@ -72,21 +74,20 @@ CREATE TABLE `service` (
   `id_service` int(11) NOT NULL,
   `nom_service` varchar(30) NOT NULL,
   `photo_service` varchar(30) NOT NULL,
-  `description` text NOT NULL,
-  `prix` int(11) DEFAULT NULL
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `service`
 --
 
-INSERT INTO `service` (`id_service`, `nom_service`, `photo_service`, `description`, `prix`) VALUES
-(1, 'Maison individuelle', 'src/image/maison_individuelle.', 'Maison individuelle de 50 m²', 100000),
-(2, 'Route communale 1km', 'src/image/route.jfif', 'Routes communale avec barrière et marquage au sol inclus', 20000),
-(3, 'Route départemantale 1km', 'src/image/route.jfif', 'Routes départemantale avec barrière et marquage au sol inclus', 20000),
-(4, 'Route nationale 1km', 'src/image/route.jfif', 'Routes nationale avec barrière et marquage au sol inclus', 20000),
-(5, 'Route communale 1km', 'src/image/route.jfif', 'Routes communale avec barrière et marquage au sol inclus', 20000),
-(6, 'Route communale 1km', 'src/image/route.jfif', 'Routes communale avec barrière et marquage au sol inclus', 20000);
+INSERT INTO `service` (`id_service`, `nom_service`, `photo_service`, `description`) VALUES
+(1, 'Maison individuelle', 'src/image/maison_individuelle.', 'Maison individuelle de 50 m²'),
+(2, 'Route communale 1km', 'src/image/route.jfif', 'Routes communale avec barrière et marquage au sol inclus'),
+(3, 'Route départemantale 1km', 'src/image/route.jfif', 'Routes départemantale avec barrière et marquage au sol inclus'),
+(4, 'Route nationale 1km', 'src/image/route.jfif', 'Routes nationale avec barrière et marquage au sol inclus'),
+(5, 'Route communale 1km', 'src/image/route.jfif', 'Routes communale avec barrière et marquage au sol inclus'),
+(6, 'Route communale 1km', 'src/image/route.jfif', 'Routes communale avec barrière et marquage au sol inclus');
 
 --
 -- Index pour les tables déchargées
@@ -135,7 +136,7 @@ ALTER TABLE `service`
 -- Contraintes pour la table `contenu`
 --
 ALTER TABLE `contenu`
-  ADD CONSTRAINT `FK_devis` FOREIGN KEY (`id_devis`) REFERENCES `devis` (`id_devis`),
+  ADD CONSTRAINT `FK_contenu_devis` FOREIGN KEY (`id_devis`) REFERENCES `devis` (`id_devis`),
   ADD CONSTRAINT `FK_service` FOREIGN KEY (`id_service`) REFERENCES `service` (`id_service`);
 COMMIT;
 

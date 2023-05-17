@@ -1,9 +1,9 @@
 section {
     padding: 1rem 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 30%);
     width: 100%;
-    grid-gap: 2rem;
+    grid-gap: 2.5rem;
     grid-template-areas:
         ". expertise ."
         "competence competence competence"
@@ -26,12 +26,13 @@ section h1 {
 .presentation {
     font-size: 2rem;
     text-align: justify;
+    padding: 20px;
 }
 
 .image_presentation {
     width: auto;
-    height: 400px;
-    background: linear-gradient(to left, rgba(232, 232, 232, 0) 90%, rgba(232, 232, 232, 1) 100%), url(src/image/chantier_1.jpg);
+    height: 248px;
+
 }
 
 .fondateur {
@@ -56,4 +57,5 @@ section h1 {
 cards {
     display: flex;
     justify-content: space-evenly;
+
 }
