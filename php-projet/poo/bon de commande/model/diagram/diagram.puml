@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client {
+    -id_client : entier
+    -nom : chaine
+    -rue : chaine
+    -ville : chaine
+    -code_postal : chaine
+    -numero_telephone : chaine
+    -pays_client : chaine
+}
+
+class Produit{
+     -ref_produit : chaine
+     -description_produit : chaine
+     -prix_HT : decimal
+     -taux_TVA : decimal
+     -unite :chaine
+ }
+
+class Commande {
+    -id_commande : entier
+    -date_commande : date
+    -mode_paiement : chaine
+    -modalité_paiement : chaine
+    +ajouterProduit(Produit : Produit, Quantite : int) :void
+    +editer_bon () : void
+}
+
+class ProduitCommande{
+-quantite : decimal
+}
+
+Commande "1..1" --> "1..*" ProduitCommande : Comporte >
+Commande "0..*" --> "1..1" Client: Est passée par >
+ProduitCommande "0..*" --> "1..1" Produit : Contient >
+@enduml
