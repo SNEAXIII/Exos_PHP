@@ -29,10 +29,10 @@ class Commande {
 }
 
 class ProduitCommande{
--quantite : decimal
+-quantite : entier
 }
 
-Commande "1..1" --> "1..*" ProduitCommande : Comporte >
+Commande "1..1" --> "1..*" ProduitCommande : Comporte X >
 Commande "0..*" --> "1..1" Client: Est passée par >
 ProduitCommande "0..*" --> "1..1" Produit : Contient >
 @enduml

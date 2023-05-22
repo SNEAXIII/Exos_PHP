@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aca7c392-25aa-42b7-8073-bb02f9deed33" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/class/Auteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/class/Auteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/class/Livre.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/class/Livre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/dao/auteurDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/dao/auteurDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/dao/livreDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/dao/livreDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDaoLivre.php" beforeDir="false" afterPath="$PROJECT_DIR$/testDaoLivre.php" afterDir="false" />
-    </list>
+    <list default="true" id="aca7c392-25aa-42b7-8073-bb02f9deed33" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,6 +109,7 @@
       <workItem from="1684326876176" duration="1147000" />
       <workItem from="1684328046856" duration="9528000" />
       <workItem from="1684338143859" duration="618000" />
+      <workItem from="1684751812036" duration="189000" />
     </task>
     <servers />
   </component>
