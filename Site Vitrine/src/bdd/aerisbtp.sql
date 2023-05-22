@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 17 mai 2023 à 14:03
--- Version du serveur : 10.4.24-MariaDB
--- Version de PHP : 8.1.6
+-- Généré le : lun. 22 mai 2023 à 23:59
+-- Version du serveur : 10.4.25-MariaDB
+-- Version de PHP : 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -73,7 +73,7 @@ INSERT INTO `devis` (`id_devis`, `nom_client`, `prenom_client`, `adresse_client`
 CREATE TABLE `service` (
   `id_service` int(11) NOT NULL,
   `nom_service` varchar(30) NOT NULL,
-  `photo_service` varchar(30) NOT NULL,
+  `photo_service` varchar(60) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -82,12 +82,16 @@ CREATE TABLE `service` (
 --
 
 INSERT INTO `service` (`id_service`, `nom_service`, `photo_service`, `description`) VALUES
-(1, 'Maison individuelle', 'src/image/maison_individuelle.', 'Maison individuelle de 50 m²'),
+(1, 'Maison individuelle', 'src/image/maison_individuelle.jpg', 'Maison individuelle de 50 m²'),
 (2, 'Route communale 1km', 'src/image/route.jfif', 'Routes communale avec barrière et marquage au sol inclus'),
-(3, 'Route départemantale 1km', 'src/image/route.jfif', 'Routes départemantale avec barrière et marquage au sol inclus'),
+(3, 'Route départementale 1km', 'src/image/route.jfif', 'Routes départementale avec barrière et marquage au sol inclus'),
 (4, 'Route nationale 1km', 'src/image/route.jfif', 'Routes nationale avec barrière et marquage au sol inclus'),
-(5, 'Route communale 1km', 'src/image/route.jfif', 'Routes communale avec barrière et marquage au sol inclus'),
-(6, 'Route communale 1km', 'src/image/route.jfif', 'Routes communale avec barrière et marquage au sol inclus');
+(5, 'Terrassement', 'src/image/travaux-de-terrassement.jpg', 'Terrassement pour votre nouvelle maison'),
+(6, 'Etude de sol', 'src/image/Expertise-Sites-sols.jpg', 'Analyse de la pollution du sol'),
+(7, 'Fondation', 'src/image/expertise-fondations-structure.jpg', 'Realisation des fondations'),
+(8, 'Terrasse en désactivé', 'src/image/terrasse_desactive.jpg', 'Application de béton désactivé sur la terrasse'),
+(9, 'Immeuble locatif', 'src/image/batimentLocatif.jpg', 'Construction d\'immeuble locatif'),
+(10, 'Mairie', 'src/image/marieAbuild.jpg', 'Construction d\'une mairie');
 
 --
 -- Index pour les tables déchargées
@@ -126,7 +130,7 @@ ALTER TABLE `devis`
 -- AUTO_INCREMENT pour la table `service`
 --
 ALTER TABLE `service`
-  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Contraintes pour les tables déchargées

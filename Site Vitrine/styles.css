@@ -7,7 +7,10 @@
     font-size: 62.5%;
     font-family: 'Oswald', sans-serif;
 }
-
+a {
+    color: inherit;
+    text-decoration: none;
+}
 @media screen and (max-width: 50rem) {
     header, nav ul {
         flex-direction: column;
@@ -65,13 +68,14 @@ nav ul {
     list-style: none;
 }
 
-nav ul li {
+nav ul li,a {
     display: block;
     margin: 0 1rem;
     font-size: 3rem;
     text-transform: uppercase;
     padding: 1rem 0;
     cursor: pointer;
+    text-decoration: none;
     transition: color 300ms;
 }
 
@@ -81,6 +85,7 @@ nav ul li {
 
 nav ul ul {
     width: 35rem;
+    flex-direction: column;
 }
 
 #recherche {
@@ -94,4 +99,14 @@ input[type=submit] {
     width: 3rem;
     height: 3rem;
     border-color: #e8e8e8;
+}
+
+footer {
+    background-color: #293133;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    font-size: 3rem;
+    margin: 1.5rem auto 0 auto;
+    /*width: 100vw;*/
 }
