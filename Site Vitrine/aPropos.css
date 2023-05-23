@@ -12,33 +12,39 @@ p {
     text-indent: 1cm;
     text-align: justify;
 }
+section {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    width: 100%;
+    grid-gap: 10rem;
+}
 case {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 450px;
     width: 100%;
     align-items: center;
-
+    border-radius: 15px 0;
+    background-color: #d2d1d1;
+    box-shadow: 5px 5px 15px #464646;
+    transition: all 300ms;
+}
+case:hover {
+    transform: translate(10px,10px);
+    box-shadow: 1px 1px 5px;
 }
 .illus {
     width: 100%;
+    height: 300px;
     aspect-ratio: auto 640 / 640;
+}
+h2,h3 {
+    margin: 1.5rem 0;
 }
 h2 {
     font-size: 3.5rem;
 }
 h3 {
     font-size: 2.5rem;
-}
-section {
-    padding: 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    width: 100%;
-    grid-gap: 2.5rem;
-    grid-template-areas:
-        "test1 test2 test3"
-        "test4 test5 test6"
-        "test7 test8 test9"
-        "test10 test11 test12";
 }

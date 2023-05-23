@@ -77,9 +77,9 @@ class Commande
             "   $rue\n".
             "   $codePostal $ville\n\n".
             "$listeProduit\n".
-            "       Total HT : $HT €\n".
-            "       Total TVA : $TVA €\n".
-            "       Total TTC : $TTC €\n"
+            "           Total HT : $HT €\n".
+            "           Total TVA : $TVA €\n".
+            "           Total TTC : $TTC €\n"
             ;
         return $texte;
     }

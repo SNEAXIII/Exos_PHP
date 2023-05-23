@@ -22,7 +22,7 @@
     importante, les deux entrepreneurs ont décidé d’investir dans un local et d'embaucher quelques
     employés afin de réaliser leurs premiers chantiers. Forts de leur succès, ils ont décidé de fonder
     leur entreprise de BTP nommée ÆRIS BTP en 1984 à Tours avec de plus grands locaux et plus
-    de personnel afin d’être en mesure de mener intégralement un projet de chantier, de la
+    de personnel pour être en mesure de mener intégralement un projet de chantier, de la
     conception à la réalisation avec une démarche écoresponsable.
 </p>
 
@@ -33,16 +33,25 @@
 
 <h1>Réalisations</h1>
 <section>
+    <?php
+    $liste = [
+            ["Batiment locatif","src/image/batimentLocatif.jpg","Bordeaux - 2021/2023"],
+            ["Maison individuelle","src/image/maison_individuelle.jpg","Lille - 2018"],
+            ["Route communale","src/image/routeCommunale.png","Vallons-Pont-d'Arc - 2007"],
+            ["Rénovation Autoroute A5","src/image/A5.png","Reims - 2005"],
+            ["Rénovation Mairie","src/image/besac.png","Besançon - 2000"],
+            ["Rénovation ENSA","src/image/ensa.png","Nancy - 1995"],
+    ];
+    foreach ($liste as $elem) {
+    ?>
     <case>
-        <h2>Batiment locatif</h2>
-        <img class="illus" src="src/image/batimentLocatif.jpg" alt="">
-        <h3>Bordeaux - 2021/2023</h3>
+        <h2><?= $elem[0]?></h2>
+        <img class="illus" src="<?= $elem[1]?>" alt="">
+        <h3><?= $elem[2]?></h3>
     </case>
-    <case>
-        <h2>Nouvelle mairie</h2>
-        <img class="illus" src="src/image/realisation2.jpg" alt="">
-        <h3>Meilleraie-Tillay - 2018</h3>
-    </case>
+    <?php
+    }
+    ?>
 </section>
 
 <?php require_once "src/utils/footer.php" ?>
