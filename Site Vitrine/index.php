@@ -54,13 +54,12 @@
         la terrasse ou l'expertise du sol, des mairies pour les municipalités ou des immeubles locatifs. Vous trouverez
         ci-dessous quelques une de nos réalisations.
     </p>
-    <!--    <img class="image_presentation image" style="grid-area: presentationImage" src="src/image/chantier_1.jpg" alt="chatier">-->
     <img class="imageIllustration" style="grid-area: presentationImage" src="src/image/chantier_2.jpg"
          alt="chantier en cours">
     <h1 style="grid-area: titre2">Nos réalisations</h1>
-    <img class="imageIllustration" style="grid-area: imageIllustration1" src="bulk_bank_image/realisation2.jpg" alt="">
+    <img class="imageIllustration" style="grid-area: imageIllustration1" src="src/image/realisation2.jpg" alt="">
     <span class="legende" style="grid-area: legende1">Nouvelle mairie de Meilleraie-Tillay<br>2018</span>
-    <img class="imageIllustration" style="grid-area: imageIllustration2" src="bulk_bank_image/realisation1.jpg" alt="">
+    <img class="imageIllustration" style="grid-area: imageIllustration2" src="src/image/realisation1.jpg" alt="">
     <span class="legende" style="grid-area: legende2">Nouvelle mairie d'Echenoz-la-Méline<br>2012</span>
 </section>
 <?php require_once "src/utils/footer.php" ?>

@@ -13,38 +13,30 @@ section {
         "imageIllustration1 imageIllustration1 legende1"
         "legende2 imageIllustration2 imageIllustration2";
 }
-
 #img_illus {
     width: 640px;
     aspect-ratio: auto 640 / 640;
 }
-
 section h1 {
     text-align: center;
 }
-
 .presentation {
     font-size: 2rem;
     text-align: justify;
     padding: 20px;
 }
-
 .image_presentation {
     width: auto;
     height: 248px;
-
 }
-
 .fondateur {
 
 }
-
 .imageIllustration {
     width: 100%;
     border-radius: 1.5rem;
     border: solid 1px black;
 }
-
 .legende {
     font-size: 2.5rem;
     align-self: center;
@@ -53,9 +45,7 @@ section h1 {
     border-bottom: solid 1px black;
     padding: 0.3rem;
 }
-
 cards {
     display: flex;
     justify-content: space-evenly;
-
 }
