@@ -12,11 +12,11 @@ class Client {
 }
 
 class Produit{
-     -ref_produit : chaine
+     -ref_produit : entier
      -description_produit : chaine
      -prix_HT : decimal
      -taux_TVA : decimal
-     -unite :chaine
+     -unite : chaine
  }
 
 class Commande {

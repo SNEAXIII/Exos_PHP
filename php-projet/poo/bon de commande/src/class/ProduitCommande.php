@@ -6,6 +6,16 @@ class ProduitCommande {
     private Produit $produit;
 
     /**
+     * @param int $quantitee
+     * @param Produit $produit
+     */
+    public function __construct(int $quantitee, Produit $produit)
+    {
+        $this -> quantitee = $quantitee;
+        $this -> produit = $produit;
+    }
+
+    /**
      * @return int
      */
     public function getQuantitee(): int

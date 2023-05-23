@@ -1,15 +1,31 @@
 <?php
 class Produit {
-    private string $refProduit;
+    private int $refProduit;
     private string $descriptionProduit;
     private float $prixHT;
     private float $tauxTVA;
     private string $unite;
 
     /**
-     * @return string
+     * @param int $refProduit
+     * @param string $descriptionProduit
+     * @param float $prixHT
+     * @param float $tauxTVA
+     * @param string $unite
      */
-    public function getRefProduit(): string
+    public function __construct(int $refProduit, string $descriptionProduit, float $prixHT, float $tauxTVA, string $unite)
+    {
+        $this -> refProduit = $refProduit;
+        $this -> descriptionProduit = $descriptionProduit;
+        $this -> prixHT = $prixHT;
+        $this -> tauxTVA = $tauxTVA;
+        $this -> unite = $unite;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRefProduit(): int
     {
         return $this -> ref_produit;
     }

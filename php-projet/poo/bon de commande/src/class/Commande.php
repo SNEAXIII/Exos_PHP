@@ -5,13 +5,60 @@ class Commande
 {
     private int $idCommande;
     private DateTime $dateCommande;
-    private string modePaiement;
+    private ?string $modePaiement;
+    private ?string $modalitePaiement;
+    /**
+     * @var ProduitCommande[]
+     */
+    private array $listeProduitsCommandes;
+    private Client $client;
 
--id_commande : entier
--date_commande : date
--mode_paiement : chaine
--modalité_paiement : chaine
+    /**
+     * @param int $idCommande
+     * @param DateTime $dateCommande
+     * @param ?string $modePaiement
+     * @param ?string $modalitePaiement
+     * @param ProduitCommande[] $listeProduitsCommandes
+     * @param Client $client
+     */
+    public function __construct(int $idCommande, DateTime $dateCommande, Client $client, string $modePaiement = null, string $modalitePaiement = null, array $listeProduitsCommandes = [])
+    {
+        $this -> idCommande = $idCommande;
+        $this -> dateCommande = $dateCommande;
+        $this -> modePaiement = $modePaiement;
+        $this -> modalitePaiement = $modalitePaiement;
+        $this -> listeProduitsCommandes = $listeProduitsCommandes;
+        $this -> client = $client;
+    }
 
-
-
+    /**
+     * @param produit $produit
+     * @param int $nb
+     * @return null
+     */
+    public function ajouterProduit(produit $produit, int $nb) : bool
+    {
+        foreach ($this -> listeProduitsCommandes as $produitCommande) {
+            if ($produitCommande -> getProduit() === $produit) {
+                $produitCommande->setQuantitee($produitCommande->getQuantitee()+$nb);
+                return true;
+            }
+        }
+        $this -> listeProduitsCommandes[] = new ProduitCommande($nb,$produit);
+        return false;
+    }
+    public function editer() : void {
+        echo $this;
+    }
+    public function __toString(): string
+    {
+        $noCommande = $this->idCommande;
+        $client = $this->client->getNomClient();
+        $rue = $this->client->getRue();
+        $codePostal = $this->client->getCodePostal();
+        $ville = $this->client->getVille();
+        
+        $texte = "";
+        return $texte;
+    }
 }

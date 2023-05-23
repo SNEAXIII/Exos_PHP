@@ -8,7 +8,27 @@ class Client
     private string $ville;
     private string $codePostal;
     private string $numeroTelephone;
-    private string $paysClient;
+    private ?string $paysClient;
+
+    /**
+     * @param int $idClient
+     * @param string $nomClient
+     * @param string $rue
+     * @param string $ville
+     * @param string $codePostal
+     * @param string $numeroTelephone
+     * @param string $paysClient
+     */
+    public function __construct(int $idClient, string $nomClient, string $rue, string $codePostal, string $ville, string $numeroTelephone, string $paysClient = null)
+    {
+        $this -> idClient = $idClient;
+        $this -> nomClient = $nomClient;
+        $this -> rue = $rue;
+        $this -> ville = $ville;
+        $this -> codePostal = $codePostal;
+        $this -> numeroTelephone = $numeroTelephone;
+        $this -> paysClient = $paysClient;
+    }
 
     /**
      * @return int
