@@ -53,12 +53,20 @@ class Commande
     public function __toString(): string
     {
         $noCommande = $this->idCommande;
+        $date = $this->dateCommande;
         $client = $this->client->getNomClient();
+        $idClient = $this->client->getIdClient();
         $rue = $this->client->getRue();
         $codePostal = $this->client->getCodePostal();
         $ville = $this->client->getVille();
-        
-        $texte = "";
+
+        $texte =
+            "
+            Commande n°$noCommande du $date
+            Client : $client ($idClient) 
+            $rue
+            $codePostal $ville
+            ";
         return $texte;
     }
 }

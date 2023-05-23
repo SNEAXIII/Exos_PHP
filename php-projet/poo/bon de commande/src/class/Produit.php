@@ -1,5 +1,7 @@
 <?php
-class Produit {
+
+class Produit
+{
     private int $refProduit;
     private string $descriptionProduit;
     private float $prixHT;
