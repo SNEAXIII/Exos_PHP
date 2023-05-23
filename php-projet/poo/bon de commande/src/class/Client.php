@@ -14,10 +14,10 @@ class Client
      * @param int $idClient
      * @param string $nomClient
      * @param string $rue
-     * @param string $ville
      * @param string $codePostal
+     * @param string $ville
      * @param string $numeroTelephone
-     * @param string $paysClient
+     * @param string|null $paysClient
      */
     public function __construct(int $idClient, string $nomClient, string $rue, string $codePostal, string $ville, string $numeroTelephone, string $paysClient = null)
     {

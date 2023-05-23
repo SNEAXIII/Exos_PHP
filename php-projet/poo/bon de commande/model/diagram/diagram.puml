@@ -26,10 +26,16 @@ class Commande {
     -modalité_paiement : chaine
     +ajouterProduit(Produit : Produit, Quantite : int) :void
     +editer_bon () : void
+    +totalHT() : float
+    +totalTVA() : float
+    +totalTTC() : float
 }
 
 class ProduitCommande{
--quantite : entier
+-quantite : decimal
++totalHT() : float
++totalTVA() : float
++totalTTC() : float
 }
 
 Commande "1..1" --> "1..*" ProduitCommande : Comporte X >

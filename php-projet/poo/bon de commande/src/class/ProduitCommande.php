@@ -1,40 +1,49 @@
 <?php
 require_once "main.php";
 
-class ProduitCommande {
-    private int $quantitee;
+class ProduitCommande
+{
+    private float $quantitee;
     private Produit $produit;
 
     /**
-     * @param int $quantitee
+     * @param float $quantitee
      * @param Produit $produit
      */
-    public function __construct(int $quantitee, Produit $produit)
+    public function __construct(float $quantitee, Produit $produit)
     {
         $this -> quantitee = $quantitee;
         $this -> produit = $produit;
     }
+
     public function __toString(): string
     {
-        $refProduit = $this->produit->getRefProduit();
-        $descriptionProduit = $this->produit->getDescriptionProduit();
-        $unite =$this->produit->getUnite();
-        $nb = $this->quantitee;
-        $prix = $this->produit->getPrixHT();
-        $tauxPourcent = $this->produit->getTauxTVA();
-        $TVA = $this->totalTVA();
-        $TTC = $this->totalTTC();
-        return "$refProduit - $descriptionProduit - $nb - $unite - $prix € - $tauxPourcent % - $TVA € - $TTC";
+        $refProduit = $this -> produit -> getRefProduit();
+        $descriptionProduit = $this -> produit -> getDescriptionProduit();
+        $unite = $this -> produit -> getUnite();
+        $nb = $this -> quantitee;
+        $prix = $this -> produit -> getPrixHT();
+        $tauxPourcent = $this -> produit -> getTauxTVA();
+        $TVA = $this -> totalTVA();
+        $TTC = $this -> totalTTC();
+        return "$refProduit - $descriptionProduit - $nb - $unite - $prix € - $tauxPourcent % - $TVA € - $TTC €";
     }
-    public function totalHT() : float {
-        return $this->produit->getPrixHT()*$this->getQuantitee();
+
+    public function totalHT(): float
+    {
+        return $this -> produit -> getPrixHT() * $this -> getQuantitee();
     }
-    public function totalTVA() : float {
-        return ($this->produit->getTauxTVA()/100)*$this->totalHT();
+
+    public function totalTVA(): float
+    {
+        return ($this -> produit -> getTauxTVA() / 100) * $this -> totalHT();
     }
-    public function totalTTC() : float {
-        return $this->totalHT()+$this->totalTVA();
+
+    public function totalTTC(): float
+    {
+        return $this -> totalHT() + $this -> totalTVA();
     }
+
     /**
      * @return int
      */
@@ -44,9 +53,9 @@ class ProduitCommande {
     }
 
     /**
-     * @param int $quantitee
+     * @param float $quantitee
      */
-    public function setQuantitee(int $quantitee): void
+    public function setQuantitee(float $quantitee): void
     {
         $this -> quantitee = $quantitee;
     }

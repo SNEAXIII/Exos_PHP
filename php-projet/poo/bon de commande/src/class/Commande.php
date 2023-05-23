@@ -34,47 +34,80 @@ class Commande
     /**
      * @param produit $produit
      * @param int $nb
-     * @return null
+     * @return bool
      */
-    public function ajouterProduit(produit $produit, int $nb) : bool
+    public function ajouterProduit(produit $produit, int $nb): bool
     {
         foreach ($this -> listeProduitsCommandes as $produitCommande) {
             if ($produitCommande -> getProduit() === $produit) {
-                $produitCommande->setQuantitee($produitCommande->getQuantitee()+$nb);
+                $produitCommande -> setQuantitee($produitCommande -> getQuantitee() + $nb);
                 return true;
             }
         }
-        $this -> listeProduitsCommandes[] = new ProduitCommande($nb,$produit);
+        $this -> listeProduitsCommandes[] = new ProduitCommande($nb, $produit);
         return false;
     }
-    public function editer() : void {
+
+    public function editer(): void
+    {
         echo $this;
     }
+
     public function __toString(): string
     {
-        $noCommande = $this->idCommande;
-        $date = $this->dateCommande;
-        $client = $this->client->getNomClient();
-        $idClient = $this->client->getIdClient();
-        $rue = $this->client->getRue();
-        $codePostal = $this->client->getCodePostal();
-        $ville = $this->client->getVille();
+        $noCommande = $this -> idCommande;
+        $date = $this -> dateCommande -> format('d/m/Y');
+        $client = $this -> client -> getNomClient();
+        $idClient = $this -> client -> getIdClient();
+        $rue = $this -> client -> getRue();
+        $codePostal = $this -> client -> getCodePostal();
+        $ville = $this -> client -> getVille();
+        $TVA = $this->totalTVA();
+        $TTC = $this->totalTTC();
+        $HT = $this->totalHT();
+
+        $listeProduit = "";
+        foreach ($this->listeProduitsCommandes as $produit){
+            $listeProduit .= "   $produit\n";
+        }
 
         $texte =
-            "
-            Commande n°$noCommande du $date
-            Client : $client ($idClient) 
-            $rue
-            $codePostal $ville
-            ";
+            "Commande n°$noCommande du $date\n".
+            "Client : $client ($idClient)\n".
+            "   $rue\n".
+            "   $codePostal $ville\n\n".
+            "$listeProduit\n".
+            "       Total HT : $HT €\n".
+            "       Total TVA : $TVA €\n".
+            "       Total TTC : $TTC €\n"
+            ;
         return $texte;
     }
 
-    /**
-     * @return ProduitCommande[]
-     */
-    public function getListeProduitsCommandes(): array
+
+    public function totalHT(): float
     {
-        return $this -> listeProduitsCommandes;
+        $HT = 0;
+        foreach ($this->listeProduitsCommandes as $produitsCommande) {
+            $HT += $produitsCommande->totalHT();
+        }
+        return $HT;
+    }
+    public function totalTVA(): float
+    {
+        $TVA = 0;
+        foreach ($this->listeProduitsCommandes as $produitsCommande) {
+            $TVA += $produitsCommande->totalTVA();
+        }
+        return $TVA;
+    }
+
+    public function totalTTC(): float
+    {
+        $TTC = 0;
+        foreach ($this->listeProduitsCommandes as $produitsCommande) {
+            $TTC += $produitsCommande->totalTTC();
+        }
+        return $TTC;
     }
 }
