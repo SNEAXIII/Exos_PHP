@@ -15,7 +15,7 @@ p {
 section {
     padding: 1rem 0;
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(3, minmax(0,auto));
     width: 100%;
     grid-gap: 10rem;
 }

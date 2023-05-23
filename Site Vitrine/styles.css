@@ -103,9 +103,9 @@ input[type=submit] {
 footer {
     background-color: #293133;
     color: #FFFFFF;
-    padding: 20px;
+    padding: 1.5rem;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 1.5rem auto 0 auto;
     bottom: 0;
     position: -webkit-sticky;

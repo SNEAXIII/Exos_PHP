@@ -1,0 +1,18 @@
+h1 {
+    width:max-content;
+    margin: 4rem auto;
+}
+h2 {
+    font-size: 3rem;
+}
+p {
+    font-size: 5rem;
+}
+.contenair {
+    margin: 1rem 0;
+    display: flex;
+}
+input {
+    margin: 0 2rem;
+    width: 5rem;
+}
