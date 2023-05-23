@@ -1,7 +1,7 @@
 <?php
 //cette classe permet de faire du CRUD et tu mapping relationnel
-require_once "./src/modele/class/Auteur.php";
-require_once "./src/modele/class/Database.php";
+require_once "./src/modele/entite/Auteur.php";
+require_once "./src/modele/entite/Database.php";
 
 class AuteurDao
 {

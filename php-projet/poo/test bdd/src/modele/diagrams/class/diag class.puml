@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+class livre
+{
+    -isbn : chaine
+    -titre : chaine
+    -nbPages : entier
+    -dateParution : date
+}
+class categorie
+{
+    -categorie : chaine
+}
+class Auteur
+{
+    -prenom : chaine
+    -nom : chaine
+}
+class editeur
+{
+    -nom : chaine
+    -ville : chaine
+}
+livre "0..*" --> "1..1" Auteur : est écrit par >
+livre "0..* "--> "1..1" editeur : est édité par >
+livre "0..*" --> "1..1" categorie : appartient à >
+
+@enduml

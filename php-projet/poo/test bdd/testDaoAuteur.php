@@ -1,7 +1,7 @@
 <?php
 
 require_once "./src/modele/dao/auteurDAO.php";
-require_once "./src/modele/class/Auteur.php";
+require_once "./src/modele/entite/Auteur.php";
 
 $auteurs = new AuteurDao();
 

@@ -1,7 +1,7 @@
 <?php
-require_once "./src/modele/class/Auteur.php";
-require_once "./src/modele/class/Database.php";
-require_once "./src/modele/class/Livre.php";
+require_once "./src/modele/entite/Auteur.php";
+require_once "./src/modele/entite/Database.php";
+require_once "./src/modele/entite/Livre.php";
 
 class LivreDAO
 {
@@ -42,6 +42,25 @@ class LivreDAO
             ";
         $requete = $connexion -> prepare($requeteSQL);
         $requete->bindValue(":isbn",$isbn);
+        $requete -> execute();
+        if ($requete === false) {
+            return null;
+        }
+        return $this->toObject($requete->fetch(PDO::FETCH_ASSOC));
+    }
+    public function findByIdAuteur(int $idAuteur): ?Livre
+    {
+        $connexion = Database ::getConnection();
+        $requeteSQL =
+            "
+            SELECT * 
+            FROM livre as l 
+                INNER JOIN auteur a 
+                    on l.id_auteur = a.id_auteur
+            WHERE a.id_auteur = :id
+            ";
+        $requete = $connexion -> prepare($requeteSQL);
+        $requete->bindValue(":id",$idAuteur);
         $requete -> execute();
         if ($requete === false) {
             return null;
