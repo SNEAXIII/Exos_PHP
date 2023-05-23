@@ -29,7 +29,7 @@ class Produit
      */
     public function getRefProduit(): int
     {
-        return $this -> ref_produit;
+        return $this -> refProduit;
     }
 
     /**
@@ -37,7 +37,7 @@ class Produit
      */
     public function setRefProduit(string $ref_produit): void
     {
-        $this -> ref_produit = $ref_produit;
+        $this -> refProduit = $ref_produit;
     }
 
     /**
@@ -45,7 +45,7 @@ class Produit
      */
     public function getDescriptionProduit(): string
     {
-        return $this -> description_produit;
+        return $this -> descriptionProduit;
     }
 
     /**
@@ -53,7 +53,7 @@ class Produit
      */
     public function setDescriptionProduit(string $description_produit): void
     {
-        $this -> description_produit = $description_produit;
+        $this -> descriptionProduit = $description_produit;
     }
 
     /**
@@ -61,7 +61,7 @@ class Produit
      */
     public function getPrixHT(): float
     {
-        return $this -> prix_HT;
+        return $this -> prixHT;
     }
 
     /**
@@ -69,7 +69,7 @@ class Produit
      */
     public function setPrixHT(float $prix_HT): void
     {
-        $this -> prix_HT = $prix_HT;
+        $this -> prixHT = $prix_HT;
     }
 
     /**
@@ -77,7 +77,7 @@ class Produit
      */
     public function getTauxTVA(): float
     {
-        return $this -> taux_TVA;
+        return $this -> tauxTVA;
     }
 
     /**
@@ -85,7 +85,7 @@ class Produit
      */
     public function setTauxTVA(float $taux_TVA): void
     {
-        $this -> taux_TVA = $taux_TVA;
+        $this -> tauxTVA = $taux_TVA;
     }
 
     /**

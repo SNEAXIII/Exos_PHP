@@ -13,5 +13,6 @@ $commande = new Commande(1, new DateTime(), $client);
 // Ajout de 2 lignes de commande
 $commande -> ajouterProduit($produit1, 2);
 $commande -> ajouterProduit($produit2, 1);
+echo($commande->getListeProduitsCommandes()[0]);
 // Editer la commande
 //$commande -> editer();

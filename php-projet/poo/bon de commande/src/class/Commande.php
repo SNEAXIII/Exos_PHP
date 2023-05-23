@@ -69,4 +69,12 @@ class Commande
             ";
         return $texte;
     }
+
+    /**
+     * @return ProduitCommande[]
+     */
+    public function getListeProduitsCommandes(): array
+    {
+        return $this -> listeProduitsCommandes;
+    }
 }
