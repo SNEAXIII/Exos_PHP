@@ -15,7 +15,9 @@ class ProduitCommande
         $this -> quantitee = $quantitee;
         $this -> produit = $produit;
     }
-
+    /**
+     * @return string
+     */
     public function __toString(): string
     {
         $refProduit = $this -> produit -> getRefProduit();
@@ -29,16 +31,24 @@ class ProduitCommande
         return "$refProduit - $descriptionProduit - $nb - $unite - $prix € - $tauxPourcent % - $TVA € - $TTC €";
     }
 
+    /**
+     * @return float
+     */
     public function totalHT(): float
     {
         return $this -> produit -> getPrixHT() * $this -> getQuantitee();
     }
-
+    /**
+     * @return float
+     */
     public function totalTVA(): float
     {
         return ($this -> produit -> getTauxTVA() / 100) * $this -> totalHT();
     }
 
+    /**
+     * @return float
+     */
     public function totalTTC(): float
     {
         return $this -> totalHT() + $this -> totalTVA();
@@ -66,14 +76,6 @@ class ProduitCommande
     public function getProduit(): Produit
     {
         return $this -> produit;
-    }
-
-    /**
-     * @param Produit $produit
-     */
-    public function setProduit(Produit $produit): void
-    {
-        $this -> produit = $produit;
     }
 
 }

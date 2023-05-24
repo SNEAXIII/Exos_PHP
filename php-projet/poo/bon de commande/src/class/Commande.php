@@ -39,7 +39,7 @@ class Commande
     public function ajouterProduit(produit $produit, int $nb): bool
     {
         foreach ($this -> listeProduitsCommandes as $produitCommande) {
-            if ($produitCommande -> getProduit() === $produit) {
+            if ($produitCommande -> getProduit() == $produit) {
                 $produitCommande -> setQuantitee($produitCommande -> getQuantitee() + $nb);
                 return true;
             }
@@ -77,9 +77,9 @@ class Commande
             "   $rue\n".
             "   $codePostal $ville\n\n".
             "$listeProduit\n".
-            "           Total HT : $HT €\n".
-            "           Total TVA : $TVA €\n".
-            "           Total TTC : $TTC €\n"
+            "       Total HT : $HT €\n".
+            "       Total TVA : $TVA €\n".
+            "       Total TTC : $TTC €\n"
             ;
         return $texte;
     }

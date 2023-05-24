@@ -33,17 +33,21 @@ class AuteurDao
     }
 
     //Méthode pour rechercher un auteur par son id
-    public function findById(int $id) : ?Auteur {
+    public function findByName(string $name) : ?array {
         $connexion = Database::getConnection();
-        $requeteSQL = "Select * From auteur WHERE id_auteur = :id;";
+        $requeteSQL = "Select * From auteur WHERE nom_auteur LIKE :nom_auteur;";
         $requete=$connexion->prepare($requeteSQL);
-        $requete->bindValue(":id", $id);
+        $requete->bindValue(":nom_auteur", $name);
         $requete->execute();
-        $auteurBD = $requete->fetch(PDO::FETCH_ASSOC);
-        if ($auteurBD === false) {
+        $auteursBD = $requete->fetchAll(PDO::FETCH_ASSOC);
+        if ($auteursBD === false) {
             return null;
         }
-        return $this->toObject($auteurBD);
+        $auteurs = [];
+        foreach ($auteursBD as $auteurDB) {
+            $auteurs[] = $this->toObject($auteurDB);
+        }
+        return $auteurs;
     }
 
     public function create(Auteur $auteur) : bool {

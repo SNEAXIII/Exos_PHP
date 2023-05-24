@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aca7c392-25aa-42b7-8073-bb02f9deed33" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Site Vitrine/src/utils/ajouteDansBddLEDevis.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Site Vitrine/src/utils/ajouteDansBddLEDevis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bon de commande/model/diagram/diag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bon de commande/src/class/Commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bon de commande/src/class/Commande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bon de commande/src/class/ProduitCommande.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bon de commande/src/class/ProduitCommande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bon de commande/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bon de commande/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/dataSources/52347571-c875-41a4-9141-50dff00f287e.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/dataSources/52347571-c875-41a4-9141-50dff00f287e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/dataSources/52347571-c875-41a4-9141-50dff00f287e/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/dataSources/52347571-c875-41a4-9141-50dff00f287e/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/test bdd.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/src/modele/dao/auteurDAO.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/src/modele/dao/livreDAO.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/src/modele/diagrams/class/diag class.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/src/modele/entite/Auteur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/src/modele/entite/Database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/src/modele/entite/Livre.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/src/modele/usecase/diagramme des usecase.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/src/modele/usecase/listerLivres.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/src/modele/usecase/livreParAuteur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/testDaoAuteur.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/testDaoLivre.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test bdd/tester livres.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003">
+    <xdebug_debug_ports port="9003" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1" />
+  <component name="ProjectId" id="2PrlOMP1u6Bs8lLLuYQXOtFcS6w" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xampp/php/ext/php_xdebug.dll",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PHP"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\test bdd\src\modele\diagrams\usecase" />
+      <recent name="C:\Users\Bassignota\Desktop\test bdd" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\test bdd" />
+      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\test bdd\src\modele" />
+      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\test bdd\src\modele\diagrams\class" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Script.testDaoAuteur.php (2)">
+    <configuration name="test.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DAOBIBLIO/php-projet/poo/bon de commande/test.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="PhpLocalRunConfigurationType" factoryName="PHP Console" nameIsGenerated="true">
+      <CommandLine>
+        <envs>
+          <env name="set XDEBUG_SESSION" value="1" />
+        </envs>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <configuration name="auteurDAO.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/modele/dao/auteurDAO.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 8.1" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 8.1" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <configuration name="testDaoAuteur.php (2)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/testDaoAuteur.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 8.1" />
+        </PhpTestInterpreterSettings>
+        <envs>
+          <env name="set XDEBUG_SESSION" value="1" />
+        </envs>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <configuration name="testDaoLivre.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/testDaoLivre.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 8.1" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <configuration name="tester livres.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/tester livres.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 8.1" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.test.php" />
+      <item itemvalue="PHP Script.Unnamed" />
+      <item itemvalue="PHP Script.testDaoAuteur.php (2)" />
+      <item itemvalue="PHP Script.scratch.php" />
+      <item itemvalue="PHP Script.auteurDAO.php" />
+      <item itemvalue="PHP Script.testDaoLivre.php" />
+      <item itemvalue="PHP Script.tester livres.php" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.testDaoLivre.php" />
+        <item itemvalue="PHP Script.scratch.php" />
+        <item itemvalue="JavaScript Debug.test.php" />
+        <item itemvalue="PHP Script.tester livres.php" />
+        <item itemvalue="PHP Script.auteurDAO.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aca7c392-25aa-42b7-8073-bb02f9deed33" name="Changes" comment="" />
+      <created>1684223047419</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684223047419</updated>
+      <workItem from="1684223048574" duration="90000" />
+      <workItem from="1684223148032" duration="773000" />
+      <workItem from="1684325162505" duration="1532000" />
+      <workItem from="1684326876176" duration="1147000" />
+      <workItem from="1684328046856" duration="9528000" />
+      <workItem from="1684338143859" duration="618000" />
+      <workItem from="1684751812036" duration="189000" />
+      <workItem from="1684824663126" duration="2419000" />
+      <workItem from="1684827116836" duration="1270000" />
+      <workItem from="1684931684759" duration="296000" />
+      <workItem from="1684932933932" duration="945000" />
+      <workItem from="1684934092741" duration="6554000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/modele/dao/auteurDAO.php</url>
+          <line>98</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/modele/dao/auteurDAO.php</url>
+          <line>45</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

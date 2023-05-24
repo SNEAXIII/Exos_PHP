@@ -6,4 +6,4 @@ require_once "./src/modele/dao/livreDAO.php";
 $livres = new LivreDao();
 //var_dump($livres->findAll());
 
-var_dump($livres->findByIsbn("HEHECESTUNISBN")["isbn"]);
+var_dump($livres->findByIsbn("HEHECESTUNISBN")->getIsbn());

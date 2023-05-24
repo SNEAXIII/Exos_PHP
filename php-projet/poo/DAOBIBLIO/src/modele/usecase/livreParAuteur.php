@@ -10,8 +10,8 @@ class LivreParAuteur
         $this -> livreDAO = new LivreDAO();
     }
 
-    public function execute(int $idAuteur)
+    public function execute(string $name) : array
     {
-        return $this -> livreDAO->findByIdAuteur($idAuteur);
+        return $this -> livreDAO->findByName($name);
     }
 }
