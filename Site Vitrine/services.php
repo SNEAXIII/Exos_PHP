@@ -8,7 +8,7 @@ foreach ($services as $service) {
 }
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
-    if (array_key_exists($id, $idService) and !array_key_exists($id,$_SESSION["panier"]) ) {
+    if (in_array($id, $idService) and !array_key_exists($id,$_SESSION["panier"]) ) {
         $_SESSION["panier"][$id] = 0;
 
     }

@@ -5,6 +5,12 @@ h1 {
 h2 {
     font-size: 3rem;
 }
+input {
+    font-size: 2rem;
+}
+button {
+    font-size: 2rem;
+}
 p {
     font-size: 5rem;
 }
@@ -14,5 +20,8 @@ p {
 }
 input {
     margin: 0 2rem;
-    width: 5rem;
+    width: 15rem;
+}
+form {
+    display: inline;
 }
