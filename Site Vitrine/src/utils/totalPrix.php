@@ -1,8 +1,12 @@
 <?php
-function total($session) {
+function total($session,float $tauxPourcentage) {
     $prix = 0;
     foreach ($session["panier"] as $service) {
         $prix+=$service;
     }
-    return [$prix,round($prix*1.2,2)];
+    return [
+        number_format($prix, 2, ',', ' '),
+        number_format($prix*(1+$tauxPourcentage), 2, ',', ' ')
+    ];
 }
+

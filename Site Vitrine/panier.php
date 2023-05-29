@@ -2,9 +2,30 @@
 require_once "src/utils/recupereBDD.php";
 require_once "src/utils/session.php";
 require_once "src/utils/totalPrix.php";
+$panierVide = "<p>Le panier est vide, vous n'avez pas encore selectionné de service, veuillez en selectionner au moins un et revenez sur cette page pour effectuer le devis.</p>";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    foreach ($_POST as $id => $prix) {
-        $_SESSION["panier"][$id] = intval($prix);
+    var_dump($_POST);
+    // methode frauduleuse pour acceder au 1er element de mon tableau associatif
+    if (count($_POST) == 4) {
+        $_SESSION["client"]["nom"] = trim($_POST["nom"]);
+        $_SESSION["client"]["prenom"] = trim($_POST["prenom"]);
+        $_SESSION["client"]["adresse"] = trim($_POST["adresse"]);
+        $_SESSION["client"]["codePostal"] = trim($_POST["codePostal"]);
+
+    } elseif (array_key_exists("confirmerDevis",$_POST)) {
+        echo "test";
+    } else {
+        foreach ($_POST as $id => $prix) {
+            $idParse = intval($id);
+            $prix = round(floatval($prix), 4);
+            if (array_key_exists($idParse, $_SESSION["panier"])) {
+                if (str_ends_with($id, "del")) {
+                    unset($_SESSION["panier"][$idParse]);
+                } else {
+                    $_SESSION["panier"][$id] = max($prix, 0);
+                }
+            }
+        }
     }
 }
 ?>
@@ -24,26 +45,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <h1>PANIER</h1>
 <?php
 $panier = $_SESSION["panier"];
-if (!empty($panier)) {
-    $prixTotalArray = total($_SESSION);
-    $HT = $prixTotalArray[0];
-    $TTC = $prixTotalArray[1];
+if (count($panier) != 1) {
+    require_once "src/utils/formulaire.php";
+    list($HT, $TTC) = total($_SESSION, .2);
     foreach ($panier as $id => $prix) {
-        $serviceArray = getOneService($id);
-        $nom = $serviceArray["nom_service"];
-        ?>
-        <div class="contenair"></div>
-        <h2><?= $nom ?>
-            <form action="" method="post">
-                <input type="number" name="<?= $id ?>" value="<?= $prix ?>">
-                <button type="submit">Envoyer</button>
-            </form>
-        </h2>
-        <?php
+
+        if ($id != 0) {
+
+            $serviceArray = getOneService($id);
+            $nom = $serviceArray["nom_service"];
+            ?>
+            <div class="contenair">
+                <h2><?= $nom ?></h2>
+                <div class="actions">
+                    <form action="" method="post">
+                        <button type="submit" name="<?= $id ?>del">Supprimer</button>
+                    </form>
+                    <form action="" method="post">
+                        <input type="text" name="<?= $id ?>" value="<?= $prix ?>">
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+
+            </div>
+            <?php
+        }
     }
-    echo "<h2 style='margin-top: 20px'>Le cout total HT est : $HT € et le prix TTC est : $TTC €<button style='margin-left: 20px'>Valider le devis</button></h2>";
+    echo "
+        <h2 style='margin-top: 90px'>
+            Le prix HT est : $HT € et le prix TTC est : $TTC €
+            <form action='' method='post'>
+                <button type='submit' name='confirmerDevis' style='margin-left: 20px'>Valider le devis</button>
+            </form>
+        </h2>";
 } else {
-    echo "<p>Le panier est vide, vous n'avez pas selectionné de service, veuillez en selectionner au moins un et revenez sur cette page pour effectuer le devis.</p>";
+    echo $panierVide;
 }
 ?>
 </body>

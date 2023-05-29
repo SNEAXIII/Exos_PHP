@@ -32,9 +32,9 @@
         </card>
         <card>
             <img style="grid-area : image" src="src/image/batimentLocatif.jpg" alt="">
-            <div style="grid-area : titre" class="titre">Immeuble locatif</div>
+            <div style="grid-area : titre" class="titre">Immeuble de logement</div>
             <div style="grid-area : description" class="description">Nous sommes expérimenté de dans l'élaboration de
-                batiments complexes tels que les immeubles locatifs.
+                batiments complexes tels que les immeubles de logement.
             </div>
         </card>
         <card>
@@ -51,7 +51,7 @@
         Jusqu'à la réalisation finale, nous intégrons une démarche écoresponsable à notre processus dans le but
         d'optimiser les éclairages et le chauffage pour réduire la consommation électrique. Nous réalisons des routes
         pour les collectivités, des maisons individuelles pour les particuliers avec des multiples services comme faire
-        la terrasse ou l'expertise du sol, des mairies pour les municipalités ou des immeubles locatifs. Vous trouverez
+        la terrasse ou l'expertise du sol, des mairies pour les municipalités ou des immeubles de logement. Vous trouverez
         ci-dessous quelques une de nos réalisations.
     </p>
     <img class="imageIllustration" style="grid-area: presentationImage" src="src/image/chantier_2.jpg"
