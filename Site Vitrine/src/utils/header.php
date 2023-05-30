@@ -21,7 +21,7 @@ $listeAcceuil = ["accueil", "nos services", "à propos"]
                 <li><a <?= $page == "panier.php" ? 'style="color:#778899"' : ""?>href="panier.php">Panier</a></li>
                 <li>
                     <input id="recherche" type="text" placeholder="Recherche">
-                    <input src="src/" type="submit" value=" ">
+                    <a target="_blank" href="https://urlz.fr/f6HL"><input src="src/" type="submit" value=" "></a>
                 </li>
             </ul>
         </ul>
