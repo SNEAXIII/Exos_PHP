@@ -1,4 +1,28 @@
-<?php ?>
+<?php
+require_once "src/utils/ajouteContact.php";
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $erreurs = [];
+    $valide = [];
+    foreach ($_POST as $id => $value) {
+        if ($value == null) {
+            $erreurs[$id] = "Il faut renseigner le champ suivant : $id";
+        } else {
+            $valide[$id] = $value;
+        }
+    }
+    if (count($erreurs) == 0) {
+        if (prendContact(
+            $_POST["nom"],
+            $_POST["prenom"],
+            $_POST["adresseMail"],
+            $_POST["objet"],
+            $_POST["message"]))
+        {
+            header("location: redirection.php?type=contact");
+        }
+    }
+}
+?>
 <!doctype html>
 <html lang=fr>
 <head>
@@ -32,7 +56,6 @@
 
     <label for="message">Message :</label>
     <textarea class="message" id="message" name="message" rows="5" cols="33"></textarea>
-
 
     <button type="submit">Confirmer</button>
 </form>
