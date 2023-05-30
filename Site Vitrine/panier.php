@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="panier.css">
-    <title>Page vitrine</title>
+    <title>Panier</title>
 </head>
 <body>
 <?php require_once "src/utils/header.php" ?>

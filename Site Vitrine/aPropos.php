@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="aPropos.css">
-    <title>Page vitrine</title>
+    <title>A propos</title>
 </head>
 <body>
 
