@@ -48,7 +48,7 @@ class LivreDAO
         }
         return $this->toObject($requete->fetch(PDO::FETCH_ASSOC));
     }
-    public function findByIdAuteur(int $idAuteur): ?Livre
+    public function findByName(string $nom): ?Livre
     {
         $connexion = Database ::getConnection();
         $requeteSQL =
@@ -57,17 +57,16 @@ class LivreDAO
             FROM livre as l 
                 INNER JOIN auteur a 
                     on l.id_auteur = a.id_auteur
-            WHERE a.id_auteur = :id
+            WHERE a.nom_auteur like CONCAT('%', :nom, '%')
             ";
         $requete = $connexion -> prepare($requeteSQL);
-        $requete->bindValue(":id",$idAuteur);
+        $requete->bindValue(":nom",$nom);
         $requete -> execute();
         if ($requete === false) {
             return null;
         }
         return $this->toObject($requete->fetch(PDO::FETCH_ASSOC));
     }
-
     private function toObject(array $auteurDBPlusLivreDB)
     {
         $auteur = new Auteur();

@@ -6,6 +6,7 @@ class Livre {
     private int $nombrePage;
     private Auteur $auteur;
 
+
     /**
      * @return string
      */

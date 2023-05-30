@@ -2,9 +2,9 @@
 require_once "src/utils/recupereBDD.php";
 require_once "src/utils/session.php";
 require_once "src/utils/totalPrix.php";
+require_once "src/utils/creerDevis.php";
 $panierVide = "<p>Le panier est vide, vous n'avez pas encore selectionné de service, veuillez en selectionner au moins un et revenez sur cette page pour effectuer le devis.</p>";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    var_dump($_POST);
     // methode frauduleuse pour acceder au 1er element de mon tableau associatif
     if (count($_POST) == 4) {
         $_SESSION["client"]["nom"] = trim($_POST["nom"]);
@@ -12,8 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION["client"]["adresse"] = trim($_POST["adresse"]);
         $_SESSION["client"]["codePostal"] = trim($_POST["codePostal"]);
 
-    } elseif (array_key_exists("confirmerDevis",$_POST)) {
-        echo "test";
+    } elseif (array_key_exists("confirmerDevis", $_POST)) {
+        $idDevis = creerDevis($_SESSION);
+        resetSession();
+        header("location: redirection.php?type=devis&id=$idDevis");
+        exit();
     } else {
         foreach ($_POST as $id => $prix) {
             $idParse = intval($id);
@@ -49,9 +52,7 @@ if (count($panier) != 1) {
     require_once "src/utils/formulaire.php";
     list($HT, $TTC) = total($_SESSION, .2);
     foreach ($panier as $id => $prix) {
-
         if ($id != 0) {
-
             $serviceArray = getOneService($id);
             $nom = $serviceArray["nom_service"];
             ?>
