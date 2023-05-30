@@ -1,13 +1,20 @@
 <?php
 require_once "src/utils/ajouteContact.php";
+$tab = [
+    "nom" => "",
+    "prenom" => "",
+    "adresseMail" => "",
+    "objet" => "",
+    "message" => ""
+];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $erreurs = [];
-    $valide = [];
     foreach ($_POST as $id => $value) {
         if ($value == null) {
             $erreurs[$id] = "Il faut renseigner le champ suivant : $id";
+            $tab[$id]= "";
         } else {
-            $valide[$id] = $value;
+            $tab[$id]= $value;
         }
     }
     if (count($erreurs) == 0) {
@@ -16,12 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_POST["prenom"],
             $_POST["adresseMail"],
             $_POST["objet"],
-            $_POST["message"]))
-        {
-            header("location: redirection.php?type=contact");
-        }
+            $_POST["message"]
+        )) {header("location: redirection.php?type=contact");}
     }
 }
+
 ?>
 <!doctype html>
 <html lang=fr>
