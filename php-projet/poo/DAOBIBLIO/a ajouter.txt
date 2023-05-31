@@ -1,7 +1,3 @@
-les user peuvent emprunter des livres
-user(id,nom,prenom)
-memoriser date emprunt + numero emprunt
-
-modifier diag class
 ajouter user dans bdd
 usecase pour emprunter un livre
+
