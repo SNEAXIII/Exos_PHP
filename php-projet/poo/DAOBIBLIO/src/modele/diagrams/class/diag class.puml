@@ -1,28 +1,30 @@
 @startuml
 'https://plantuml.com/class-diagram
-class livre
+class Livre
 {
     -isbn : chaine
     -titre : chaine
     -nbPages : entier
     -dateParution : date
 }
-class categorie
-{
-    -categorie : chaine
-}
 class Auteur
 {
-    -prenom : chaine
-    -nom : chaine
+    -prenomAuteur : chaine
+    -nomAuteur : chaine
 }
-class editeur
+class Emprunt
 {
-    -nom : chaine
-    -ville : chaine
+    -dateEmprunt : Date
+    -dateRetour : Date
 }
-livre "0..*" --> "1..1" Auteur : est écrit par >
-livre "0..* "--> "1..1" editeur : est édité par >
-livre "0..*" --> "1..1" categorie : appartient à >
+class Utilisateur
+{
+    -idUtilisateur : entier
+    -nomUtilisateur : chaine
+    -prenomUtilisateur : chaine
+}
+Livre "1..*"-->"1..1" Auteur : est écrit par >
+Emprunt "0..*"--> "1..1" Utilisateur : est passé par >
+Emprunt "0..*"-->"1..1" Livre : est composé de >
 
 @enduml

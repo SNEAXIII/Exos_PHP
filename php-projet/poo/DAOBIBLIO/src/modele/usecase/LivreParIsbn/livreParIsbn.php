@@ -1,7 +1,7 @@
 <?php
 require_once "./src/modele/dao/livreDAO.php";
 
-class LivreParAuteur
+class LivreParId
 {
     private LivreDAO $livreDAO;
 
@@ -10,8 +10,8 @@ class LivreParAuteur
         $this -> livreDAO = new LivreDAO();
     }
 
-    public function execute(string $name) : array
+    public function execute(string $name) : ?Livre
     {
-        return $this -> livreDAO->findByName($name);
+        return $this -> livreDAO->findByIsbn($name);
     }
 }

@@ -2,54 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aca7c392-25aa-42b7-8073-bb02f9deed33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Site Vitrine/src/utils/creerDevis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Site Vitrine/panier.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Site Vitrine/panier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Site Vitrine/src/utils/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Site Vitrine/src/utils/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-boucle/for/aleatoire.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-boucle/for/compte-envers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-boucle/for/fizz-buzz.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-boucle/for/nombres-pairs.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-boucle/while/aleatoire.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-boucle/while/nombres-pairs.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-boucle/while/saisie-note.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/assistant_VTC.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/conditions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/date_heure.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/division.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/equation-second-degre.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/jour.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/note.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/pair.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/photocopies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/remise.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/verif-email.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-conditions/vitesse-trajet.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-fonctions/FX.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-fonctions/increment.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-fonctions/indentite.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-fonctions/pair.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-fonctions/tableau.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-fonctions/test1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-fonctions/test2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-fonctions/test3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/.idea/php-liste.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/liste_1/meilleure-note.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/liste_1/moyenne-notes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/liste_1/pourcentage-avancement.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/liste_1/recherche-equipe.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/liste_2/notes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/liste_3/email.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/liste_4/grille.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/liste_4/produits.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../php-liste/liste_4/resultatsBTS.php" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/dao/utilisateurDAO.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/diagrams/usecase/utilisateur/usecaseUtilisateur.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/entite/Emprunt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/entite/Utilisateur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/usecase/LivreParIsbn/livreParIsbn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/usecase/emprunterLivre/EmprunterLivre.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/usecase/emprunterLivre/EmprunterLivreReponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/usecase/emprunterLivre/EmprunterLivreRequete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/usecase/emprunterLivre/EmprunterLivreStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/usecase/emprunterLivre/EmprunterLivreTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testDaoUtilisateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Site Vitrine/src/image/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Site Vitrine/src/image/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/dao/livreDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/dao/livreDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/entite/Livre.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/entite/Livre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tester livres.php" beforeDir="false" afterPath="$PROJECT_DIR$/tester livres.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/diagrams/class/diag class.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/diagrams/class/diag class.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/usecase/diagramme des usecase.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/usecase/listerLivres.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/usecase/listerLivre/listerLivres.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/usecase/livreParAuteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/usecase/livreParAuteur/LivreParAuteur.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,9 +52,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/php/ext/php_xdebug.dll",
+    "last_opened_file_path": "T:/Documents/Dev/PHP/Exos/Exos_PHP/php-projet/poo/DAOBIBLIO",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -101,19 +71,19 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\DAOBIBLIO" />
       <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\test bdd\src\modele\diagrams\usecase" />
       <recent name="C:\Users\Bassignota\Desktop\test bdd" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\test bdd" />
-      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\test bdd\src\modele" />
-      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\test bdd\src\modele\diagrams\class" />
+      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\DAOBIBLIO\src\modele\diagrams\usecase\utilisateur" />
+      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\DAOBIBLIO\src\modele\diagrams\usecase" />
+      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\DAOBIBLIO\src\modele\usecase\LivreParIsbn" />
+      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\DAOBIBLIO\src\modele\usecase\livreParAuteur" />
+      <recent name="T:\Documents\Dev\PHP\Exos\Exos_PHP\php-projet\poo\DAOBIBLIO\src\modele\usecase\listerLivre" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.tester livres.php">
-    <configuration name="test.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DAOBIBLIO/php-projet/poo/bon de commande/test.php" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHP Script.testDaoUtilisateur.php">
     <configuration name="Unnamed" type="PhpLocalRunConfigurationType" factoryName="PHP Console" nameIsGenerated="true">
       <CommandLine>
         <envs>
@@ -123,14 +93,6 @@
       <method v="2" />
     </configuration>
     <configuration name="livreDAO.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/modele/dao/livreDAO.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="scratch.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.php">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP 8.1" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
       <method v="2" />
     </configuration>
     <configuration name="testDaoAuteur.php (2)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/testDaoAuteur.php">
@@ -152,6 +114,9 @@
       </CommandLine>
       <method v="2" />
     </configuration>
+    <configuration name="testDaoUtilisateur.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/testDaoUtilisateur.php">
+      <method v="2" />
+    </configuration>
     <configuration name="tester livres.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/tester livres.php">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -160,22 +125,25 @@
       </CommandLine>
       <method v="2" />
     </configuration>
+    <configuration name="utilisateurDAO.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/modele/dao/utilisateurDAO.php">
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.test.php" />
       <item itemvalue="PHP Script.Unnamed" />
       <item itemvalue="PHP Script.testDaoAuteur.php (2)" />
+      <item itemvalue="PHP Script.testDaoUtilisateur.php" />
+      <item itemvalue="PHP Script.utilisateurDAO.php" />
       <item itemvalue="PHP Script.livreDAO.php" />
-      <item itemvalue="PHP Script.scratch.php" />
       <item itemvalue="PHP Script.testDaoLivre.php" />
       <item itemvalue="PHP Script.tester livres.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.testDaoUtilisateur.php" />
+        <item itemvalue="PHP Script.utilisateurDAO.php" />
         <item itemvalue="PHP Script.tester livres.php" />
         <item itemvalue="PHP Script.livreDAO.php" />
         <item itemvalue="PHP Script.testDaoLivre.php" />
-        <item itemvalue="PHP Script.scratch.php" />
-        <item itemvalue="JavaScript Debug.test.php" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +169,7 @@
       <workItem from="1684934092741" duration="6554000" />
       <workItem from="1685426406651" duration="30000" />
       <workItem from="1685430182826" duration="939000" />
+      <workItem from="1685534586819" duration="6967000" />
     </task>
     <servers />
   </component>
@@ -217,16 +186,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/modele/dao/auteurDAO.php</url>
-          <line>98</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+:Utilisateur:
+(livreParIsbn)
+(listerLivre)
+(livreParId)
+(emprunterLivre)
+
+Utilisateur-->livreParIsbn
+Utilisateur-->listerLivre
+Utilisateur-->livreParId
+Utilisateur-->emprunterLivre
+
+@enduml

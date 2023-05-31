@@ -1,6 +1,0 @@
-@startuml
-
-:Utilisateur: --> (Lister des livres)
-:Utilisateur: --> (Chercher un livre)
-
-@enduml

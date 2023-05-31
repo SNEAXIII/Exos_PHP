@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="db_biblio@localhost">
   <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.39">
-    <root id="1"/>
+    <root id="1">
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <ServerVersion>10.4.24</ServerVersion>
+    </root>
     <collation id="2" parent="1" name="big5_chinese_ci">
       <Charset>big5</Charset>
       <DefaultForCharset>1</DefaultForCharset>
@@ -1058,67 +1061,127 @@
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="340" parent="324" name="livre">
+    <table id="340" parent="324" name="emprunt">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <column id="341" parent="339" name="id_auteur">
+    <table id="341" parent="324" name="livre">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="342" parent="324" name="utilisateur">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="343" parent="339" name="id_auteur">
+      <AutoIncrement>5</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="344" parent="339" name="prenom_auteur">
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="345" parent="339" name="nom_auteur">
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <key id="346" parent="339" name="PRIMARY">
+      <ColNames>id_auteur</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="347" parent="340" name="numEmprunt">
       <AutoIncrement>1</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="342" parent="339" name="prenom_auteur">
-      <DataType>varchar(30)|0s</DataType>
+    <column id="348" parent="340" name="dateEmprunt">
+      <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="343" parent="339" name="nom_auteur">
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <key id="344" parent="339" name="PRIMARY">
-      <ColNames>id_auteur</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-    </key>
-    <column id="345" parent="340" name="isbn">
-      <DataType>varchar(25)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="346" parent="340" name="titre">
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="347" parent="340" name="dateParution">
+    <column id="349" parent="340" name="dateRetour">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="348" parent="340" name="nbPages">
+    <column id="350" parent="340" name="isbn">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="349" parent="340" name="id_auteur">
+    <column id="351" parent="340" name="id_utilisateur">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <foreign-key id="350" parent="340" name="FK_auteur">
+    <key id="352" parent="340" name="PRIMARY">
+      <ColNames>numEmprunt</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="353" parent="341" name="isbn">
+      <DataType>varchar(25)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="354" parent="341" name="titre">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="355" parent="341" name="dateParution">
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="356" parent="341" name="nbPages">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="357" parent="341" name="id_auteur">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="358" parent="341" name="FK_auteur">
       <ColNames>id_auteur</ColNames>
       <RefColNames>id_auteur</RefColNames>
       <RefTableName>auteur</RefTableName>
     </foreign-key>
-    <index id="351" parent="340" name="FK_auteur">
+    <index id="359" parent="341" name="FK_auteur">
       <ColNames>id_auteur</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="352" parent="340" name="PRIMARY">
+    <key id="360" parent="341" name="PRIMARY">
       <ColNames>isbn</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="361" parent="342" name="idUtilisateur">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="362" parent="342" name="nomUtilisateur">
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="363" parent="342" name="prenomUtilisateur">
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <key id="364" parent="342" name="PRIMARY">
+      <ColNames>idUtilisateur</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
