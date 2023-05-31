@@ -1107,11 +1107,10 @@
     </column>
     <column id="349" parent="340" name="dateRetour">
       <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="350" parent="340" name="isbn">
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
@@ -1120,67 +1119,85 @@
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <key id="352" parent="340" name="PRIMARY">
+    <foreign-key id="352" parent="340" name="FK_Emprunt1">
+      <ColNames>isbn</ColNames>
+      <RefColNames>isbn</RefColNames>
+      <RefTableName>livre</RefTableName>
+    </foreign-key>
+    <foreign-key id="353" parent="340" name="FK_Emprunt2">
+      <ColNames>id_utilisateur</ColNames>
+      <RefColNames>idUtilisateur</RefColNames>
+      <RefTableName>utilisateur</RefTableName>
+    </foreign-key>
+    <index id="354" parent="340" name="FK_Emprunt1">
+      <ColNames>isbn</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="355" parent="340" name="FK_Emprunt2">
+      <ColNames>id_utilisateur</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="356" parent="340" name="PRIMARY">
       <ColNames>numEmprunt</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="353" parent="341" name="isbn">
+    <column id="357" parent="341" name="isbn">
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="354" parent="341" name="titre">
+    <column id="358" parent="341" name="titre">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="355" parent="341" name="dateParution">
+    <column id="359" parent="341" name="dateParution">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="356" parent="341" name="nbPages">
+    <column id="360" parent="341" name="nbPages">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="357" parent="341" name="id_auteur">
+    <column id="361" parent="341" name="id_auteur">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <foreign-key id="358" parent="341" name="FK_auteur">
+    <foreign-key id="362" parent="341" name="FK_auteur">
       <ColNames>id_auteur</ColNames>
       <RefColNames>id_auteur</RefColNames>
       <RefTableName>auteur</RefTableName>
     </foreign-key>
-    <index id="359" parent="341" name="FK_auteur">
+    <index id="363" parent="341" name="FK_auteur">
       <ColNames>id_auteur</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="360" parent="341" name="PRIMARY">
+    <key id="364" parent="341" name="PRIMARY">
       <ColNames>isbn</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="361" parent="342" name="idUtilisateur">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="365" parent="342" name="idUtilisateur">
+      <AutoIncrement>2</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="362" parent="342" name="nomUtilisateur">
+    <column id="366" parent="342" name="nomUtilisateur">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="363" parent="342" name="prenomUtilisateur">
+    <column id="367" parent="342" name="prenomUtilisateur">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <key id="364" parent="342" name="PRIMARY">
+    <key id="368" parent="342" name="PRIMARY">
       <ColNames>idUtilisateur</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>

@@ -43,10 +43,11 @@ class LivreDAO
         $requete = $connexion -> prepare($requeteSQL);
         $requete->bindValue(":isbn",$isbn);
         $requete -> execute();
-        if ($requete === false) {
+        $livreDB = $requete->fetch(PDO::FETCH_ASSOC);
+        if ($livreDB === false) {
             return null;
         }
-        return $this->toObject($requete->fetch(PDO::FETCH_ASSOC));
+        return $this->toObject($livreDB);
     }
     public function findByName(string $nom): ?Livre
     {
@@ -62,10 +63,11 @@ class LivreDAO
         $requete = $connexion -> prepare($requeteSQL);
         $requete->bindValue(":nom",$nom);
         $requete -> execute();
-        if ($requete === false) {
+        $livres = $requete->fetch(PDO::FETCH_ASSOC);
+        if ($livres === false) {
             return null;
         }
-        return $this->toObject($requete->fetch(PDO::FETCH_ASSOC));
+        return $this->toObject($livres);
     }
     private function toObject(array $auteurDBPlusLivreDB)
     {

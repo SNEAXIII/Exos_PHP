@@ -4,7 +4,7 @@ require_once "./src/modele/entite/Database.php";
 
 class UtilisateurDAO
 {
-    public function utilisateurParId($id): ?Utilisateur
+    public function findById($id): ?Utilisateur
     {
         {
             $connexion = Database ::getConnection();
@@ -13,14 +13,15 @@ class UtilisateurDAO
             SELECT * 
             FROM utilisateur
             WHERE idUtilisateur = :id
-            ";
+                ";
             $requete = $connexion -> prepare($requeteSQL);
             $requete -> bindValue(":id", $id);
             $requete -> execute();
-            if ($requete === false) {
+            $utilisateurDB = $requete -> fetch(PDO::FETCH_ASSOC);
+            if ($utilisateurDB === false) {
                 return null;
             }
-            return $this -> toObject($requete -> fetch(PDO::FETCH_ASSOC));
+            return $this -> toObject($utilisateurDB);
         }
     }
     private function toObject(array $utilisateurDB):Utilisateur{
